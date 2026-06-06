@@ -70,24 +70,26 @@ function buildHtml(favs) {
     return parts.length ? parts.join('<span class="total-sep"> &nbsp;·&nbsp; </span>') : '<span class="total-label">No price data cached — visit the Market tab first</span>'
   })()
 
-  const groupsHtml = groups.map(({ set, cards: setCards }) => {
-    const cardsHtml = setCards.map(card => {
-      const isRare = RARE_RARITIES.has(card.rarity)
-      const p = prices[card.id]
-      const tcg = bestTcgPrice(p?.tcgplayer)
-      const cm = bestCmPrice(p?.cardmarket)
-      const priceDisplay = fmt(tcg?.market) ?? fmt(cm?.trend, '€') ?? null
-      return `<div class="card${isRare ? ' rare' : ''}">
+  function cardHtml(card, { showSet = false } = {}) {
+    const isRare = RARE_RARITIES.has(card.rarity)
+    const p = prices[card.id]
+    const tcg = bestTcgPrice(p?.tcgplayer)
+    const cm = bestCmPrice(p?.cardmarket)
+    const priceDisplay = fmt(tcg?.market) ?? fmt(cm?.trend, '€') ?? null
+    return `<div class="card${isRare ? ' rare' : ''}">
   <img src="${esc(card.images?.small ?? '')}" alt="${esc(card.name)}" loading="lazy" />
   <div class="label">
     <span class="name">${esc(card.name)}</span>
     ${card.number ? `<span class="number">#${esc(card.number)}</span>` : ''}
+    ${showSet ? `<span class="number">${esc(card.set?.name ?? '')}</span>` : ''}
     ${card.rarity ? `<span class="rarity${isRare ? ' is-rare' : ''}">${esc(card.rarity)}</span>` : ''}
-    ${priceDisplay ? `<span class="price${isRare ? ' price-rare' : ''}">${esc(priceDisplay)}</span>` : ''}
+    ${priceDisplay ? `<span class="price${isRare ? ' price-rare' : ''}">${esc(priceDisplay)}</span>` : '<span class="price no-price">No price</span>'}
   </div>
 </div>`
-    }).join('\n')
+  }
 
+  const groupsHtml = groups.map(({ set, cards: setCards }) => {
+    const cardsHtml = setCards.map(c => cardHtml(c)).join('\n')
     return `<section class="group">
   <div class="group-header">
     ${set.images?.logo ? `<img src="${esc(set.images.logo)}" alt="${esc(set.name)}" class="set-logo" />` : ''}
@@ -101,6 +103,20 @@ ${cardsHtml}
   </div>
 </section>`
   }).join('\n')
+
+  const sortedByPrice = [...cards].sort((a, b) => {
+    const priceOf = c => {
+      const p = prices[c.id]
+      return bestTcgPrice(p?.tcgplayer)?.market ?? bestCmPrice(p?.cardmarket)?.trend ?? null
+    }
+    const pa = priceOf(a), pb = priceOf(b)
+    if (pa == null && pb == null) return 0
+    if (pa == null) return 1
+    if (pb == null) return -1
+    return pa - pb
+  })
+
+  const byPriceHtml = sortedByPrice.map(c => cardHtml(c, { showSet: true })).join('\n')
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -153,6 +169,29 @@ ${cardsHtml}
 
     main { max-width: 1400px; margin: 0 auto; padding: 2rem 1rem; }
 
+    .view-toggle {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    .toggle-btn {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      border-radius: var(--radius);
+      padding: 0.45rem 1.1rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+    .toggle-btn:hover { color: var(--text); border-color: var(--text-muted); }
+    .toggle-btn.active {
+      background: var(--accent);
+      color: #1a1a2e;
+      border-color: var(--accent);
+    }
+
     .group { margin-bottom: 3rem; }
     .group-header {
       display: flex;
@@ -197,6 +236,7 @@ ${cardsHtml}
     .rarity.is-rare { color: var(--accent); font-weight: 600; }
     .price { font-size: 0.72rem; color: #6ecfab; font-weight: 600; margin-top: 0.15rem; }
     .price.price-rare { color: var(--accent); }
+    .price.no-price { color: var(--border); font-weight: 400; }
 
     footer {
       text-align: center;
@@ -217,11 +257,31 @@ ${cardsHtml}
     </div>
   </header>
   <main>
+    <div class="view-toggle">
+      <button class="toggle-btn active" onclick="setView('collection')">By Collection</button>
+      <button class="toggle-btn" onclick="setView('price')">By Price</button>
+    </div>
+    <div id="view-collection">
 ${groupsHtml}
+    </div>
+    <div id="view-price" style="display:none">
+      <div class="grid">
+${byPriceHtml}
+      </div>
+    </div>
   </main>
   <footer>
     Card data and images from the <a href="https://pokemontcg.io" target="_blank" rel="noopener noreferrer">Pokemon TCG API</a>
   </footer>
+  <script>
+    function setView(v) {
+      document.getElementById('view-collection').style.display = v === 'collection' ? '' : 'none';
+      document.getElementById('view-price').style.display = v === 'price' ? '' : 'none';
+      document.querySelectorAll('.toggle-btn').forEach(function(btn, i) {
+        btn.classList.toggle('active', (v === 'collection' && i === 0) || (v === 'price' && i === 1));
+      });
+    }
+  </script>
 </body>
 </html>`
 }
