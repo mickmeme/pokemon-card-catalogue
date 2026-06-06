@@ -1,0 +1,359 @@
+.page {
+  min-height: 100vh;
+}
+
+.header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  border-bottom: 2px solid var(--accent);
+  padding: 0.5rem 1rem 0.6rem;
+  position: sticky;
+  top: 44px; /* below GlobalNav */
+  z-index: 10;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--accent2);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  transition: color 0.2s;
+}
+
+.back:hover {
+  color: var(--accent);
+}
+
+.setHeader {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.headerLogo {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+
+.setMeta h1 {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-weight: 800;
+}
+
+.setStats {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  margin-top: 0.1rem;
+}
+
+.setDescription {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  margin-top: 0.3rem;
+  max-width: 80ch;
+  opacity: 0.85;
+}
+
+.main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+.controls {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.searchInput {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 1rem;
+  padding: 0.65rem 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  max-width: 400px;
+}
+
+.searchInput:focus {
+  border-color: var(--accent2);
+}
+
+.searchInput::placeholder {
+  color: var(--text-muted);
+}
+
+.rarityFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.rarityBtn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  transition: all 0.15s;
+}
+
+.rarityBtn:hover {
+  border-color: var(--accent2);
+  color: var(--text);
+}
+
+.rarityBtn.active {
+  background: var(--accent2);
+  border-color: var(--accent2);
+  color: #fff;
+}
+
+.rarityBtn.raresOnly {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.rarityBtn.raresOnly.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #000;
+}
+
+.count {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.status {
+  text-align: center;
+  color: var(--text-muted);
+  margin: 4rem 0;
+  font-size: 1.1rem;
+}
+
+.error {
+  text-align: center;
+  color: #ff6b6b;
+  margin: 4rem 0;
+}
+
+/* Card grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+/* Flip card */
+.cardWrapper {
+  perspective: 1000px;
+  cursor: pointer;
+  height: 260px;
+}
+
+.cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.cardWrapper.flipped .cardInner {
+  transform: rotateY(180deg);
+}
+
+.cardFront,
+.cardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Star / favourite button */
+.starBtn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.55);
+  border: none;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  transition: opacity 0.15s, color 0.15s, transform 0.15s;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+}
+
+.cardWrapper:hover .starBtn {
+  opacity: 1;
+}
+
+.starBtn.starred {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.starBtn:hover {
+  transform: scale(1.2);
+  color: var(--accent);
+}
+
+.cardBack {
+  transform: rotateY(180deg);
+  align-items: center;
+  justify-content: center;
+}
+
+.cardImg {
+  width: 100%;
+  flex: 1;
+  object-fit: cover;
+  object-position: top;
+}
+
+.cardImgLarge {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cardLabel {
+  padding: 0.4rem 0.5rem;
+  background: var(--surface2);
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.cardName {
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rarity {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rarity.rare {
+  color: var(--rare);
+  font-weight: 700;
+}
+
+/* ── Rarity tier colours ─────────────────────────────────────── */
+
+@keyframes rainbowBorder {
+  0%   { border-color: #ff4444; box-shadow: 0 0 14px rgba(255,68,68,0.5); }
+  16%  { border-color: #ff9900; box-shadow: 0 0 14px rgba(255,153,0,0.5); }
+  33%  { border-color: #ffe600; box-shadow: 0 0 14px rgba(255,230,0,0.5); }
+  50%  { border-color: #44ff88; box-shadow: 0 0 14px rgba(68,255,136,0.5); }
+  66%  { border-color: #44aaff; box-shadow: 0 0 14px rgba(68,170,255,0.5); }
+  83%  { border-color: #cc44ff; box-shadow: 0 0 14px rgba(204,68,255,0.5); }
+  100% { border-color: #ff4444; box-shadow: 0 0 14px rgba(255,68,68,0.5); }
+}
+
+/* Mega Hyper Rare */
+.tierMegaHyperRare .cardFront,
+.tierMegaHyperRare .cardBack {
+  animation: rainbowBorder 2.5s linear infinite;
+  background: #0d0a18;
+}
+
+/* Hyper Rare */
+.tierHyperRare .cardFront,
+.tierHyperRare .cardBack {
+  border-color: #ffd700;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.45);
+  background: #14100a;
+}
+
+/* Special Illustration Rare */
+.tierSpecialIllustrationRare .cardFront,
+.tierSpecialIllustrationRare .cardBack {
+  border-color: #d946ef;
+  box-shadow: 0 0 10px rgba(217, 70, 239, 0.35);
+  background: #160b1a;
+}
+
+/* Illustration Rare */
+.tierIllustrationRare .cardFront,
+.tierIllustrationRare .cardBack {
+  border-color: #a855f7;
+  box-shadow: 0 0 8px rgba(168, 85, 247, 0.3);
+  background: #120a1e;
+}
+
+/* Ultra Rare */
+.tierUltraRare .cardFront,
+.tierUltraRare .cardBack {
+  border-color: #3b82f6;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
+  background: #080f1e;
+}
+
+/* Double Rare */
+.tierDoubleRare .cardFront,
+.tierDoubleRare .cardBack {
+  border-color: #06b6d4;
+  box-shadow: 0 0 6px rgba(6, 182, 212, 0.25);
+  background: #051418;
+}
+
+/* Rare */
+.tierRare .cardFront,
+.tierRare .cardBack {
+  border-color: #94a3b8;
+  box-shadow: 0 0 5px rgba(148, 163, 184, 0.2);
+  background: #111520;
+}
+
+/* Uncommon */
+.tierUncommon .cardFront,
+.tierUncommon .cardBack {
+  border-color: #22c55e;
+  background: #091410;
+}
+
+/* Common — default, no override needed */
+
+/* Hover brightens the border, but skip for rainbow animation */
+.cardWrapper:not(.tierMegaHyperRare):hover .cardFront,
+.cardWrapper:not(.tierMegaHyperRare):hover .cardBack {
+  filter: brightness(1.15);
+}

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 90" role="img" aria-label="Card Catalogue">
+  <defs>
+    <style>
+      .logo-text {
+        font-family: Impact, 'Arial Black', 'Franklin Gothic Medium', sans-serif;
+        font-size: 80px;
+        font-style: italic;
+        font-weight: 900;
+        letter-spacing: -1px;
+      }
+    </style>
+  </defs>
+  <text class="logo-text" x="50%" y="76"
+    text-anchor="middle"
+    fill="none"
+    stroke="#1a1a1a"
+    stroke-width="10"
+    stroke-linejoin="round"
+    paint-order="stroke"
+  >Card Catalogue</text>
+  <text class="logo-text" x="50%" y="76"
+    text-anchor="middle"
+    fill="none"
+    stroke="#2563a8"
+    stroke-width="6"
+    stroke-linejoin="round"
+    paint-order="stroke"
+  >Card Catalogue</text>
+  <text class="logo-text" x="50%" y="76"
+    text-anchor="middle"
+    fill="#FFCC00"
+  >Card Catalogue</text>
+</svg>

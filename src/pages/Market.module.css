@@ -1,0 +1,388 @@
+.page {
+  min-height: 100vh;
+}
+
+.header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  border-bottom: 2px solid var(--accent);
+  padding: 2rem 1rem;
+}
+
+.headerInner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.totals {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.totalItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.totalLabel {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.totalValue {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.totalDivider {
+  width: 1px;
+  height: 40px;
+  background: var(--border);
+}
+
+.disclaimer {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  opacity: 0.7;
+  align-self: flex-end;
+}
+
+.main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.sortLabel {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.sortSelect {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-size: 0.85rem;
+  padding: 0.4rem 0.75rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.sortSelect:focus {
+  border-color: var(--accent2);
+}
+
+.statusBar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.count {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.fetching {
+  font-size: 0.8rem;
+  color: var(--accent2);
+}
+
+.status {
+  text-align: center;
+  color: var(--text-muted);
+  margin: 4rem 0;
+}
+
+.error {
+  text-align: center;
+  color: #ff6b6b;
+  margin: 4rem 0;
+}
+
+.empty {
+  text-align: center;
+  color: var(--text-muted);
+  margin: 5rem auto;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.emptyIcon {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+/* List */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.row {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  transition: border-color 0.15s;
+}
+
+.row:hover {
+  border-color: var(--accent2);
+}
+
+/* Reuse card flip styles — override size */
+.thumb {
+  flex-shrink: 0;
+  width: 110px !important;
+  height: 154px !important;
+  cursor: pointer;
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.cardTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.cardName {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.setName {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Prices */
+.prices {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.priceBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 130px;
+}
+
+.platform {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.priceMain {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.priceSub {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.priceBreakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  margin-top: 0.25rem;
+}
+
+.priceTier {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.priceTier b {
+  color: var(--text);
+}
+
+.noPrice {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  opacity: 0.5;
+  margin-top: 0.25rem;
+}
+
+.priceDivider {
+  width: 1px;
+  background: var(--border);
+  align-self: stretch;
+  margin: 0.25rem 0;
+}
+
+/* Links */
+.links {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.link {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: opacity 0.15s, transform 0.1s;
+  text-decoration: none;
+}
+
+.link:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
+
+.linkTcg {
+  background: rgba(228, 48, 51, 0.15);
+  border-color: rgba(228, 48, 51, 0.4);
+  color: #e77;
+}
+
+.linkCm {
+  background: rgba(0, 130, 200, 0.15);
+  border-color: rgba(0, 130, 200, 0.4);
+  color: #6af;
+}
+
+.linkEbay {
+  background: rgba(247, 208, 44, 0.12);
+  border-color: rgba(247, 208, 44, 0.35);
+  color: var(--accent);
+}
+
+.cacheStamp {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
+/* PSA section */
+.psaSection {
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.psaHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.psaTitle {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-muted);
+}
+
+.psaNote {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+.psaGrades {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.psaBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  text-decoration: none;
+  transition: opacity 0.15s, transform 0.1s;
+  min-width: 90px;
+}
+
+.psaBtn:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.psaGradeNum {
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.psaSoldLabel {
+  font-size: 0.65rem;
+  opacity: 0.75;
+}
+
+/* PSA 10 — gold */
+.psa10 {
+  background: rgba(255, 215, 0, 0.12);
+  border-color: rgba(255, 215, 0, 0.45);
+  color: #ffd700;
+}
+
+/* PSA 9.5 — silver-gold */
+.psa95 {
+  background: rgba(200, 200, 160, 0.12);
+  border-color: rgba(200, 200, 160, 0.4);
+  color: #d4d4a0;
+}
+
+/* PSA 9 — silver */
+.psa9 {
+  background: rgba(180, 190, 200, 0.12);
+  border-color: rgba(180, 190, 200, 0.35);
+  color: #b4bec8;
+}
