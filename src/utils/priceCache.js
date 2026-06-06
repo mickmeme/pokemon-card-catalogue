@@ -44,6 +44,16 @@ export function storePrices(cards) {
   write(cache)
 }
 
+// Returns all cached price entries for the given IDs (ignores TTL — for reports)
+export function getCachedPrices(ids) {
+  const cache = read()
+  const result = {}
+  for (const id of ids) {
+    if (cache[id]) result[id] = cache[id]
+  }
+  return result
+}
+
 export function formatCachedAt(ts) {
   const diff = Date.now() - ts
   const mins = Math.floor(diff / 60000)

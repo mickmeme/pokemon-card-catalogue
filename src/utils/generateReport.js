@@ -1,4 +1,5 @@
 import { RARE_RARITIES } from './rarity'
+import { getCachedPrices } from './priceCache'
 
 function esc(str) {
   return String(str ?? '')
@@ -6,6 +7,30 @@ function esc(str) {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
+}
+
+function bestTcgPrice(tcgplayer) {
+  if (!tcgplayer?.prices) return null
+  const preferred = ['holofoil', 'normal', 'reverseHolofoil', '1stEditionHolofoil', '1stEditionNormal']
+  for (const v of preferred) {
+    if (tcgplayer.prices[v]?.market != null)
+      return { market: tcgplayer.prices[v].market, low: tcgplayer.prices[v].low }
+  }
+  const first = Object.entries(tcgplayer.prices).find(([, p]) => p?.market != null)
+  if (first) return { market: first[1].market, low: first[1].low }
+  return null
+}
+
+function bestCmPrice(cardmarket) {
+  if (!cardmarket?.prices) return null
+  const p = cardmarket.prices
+  const trend = p.trendPrice ?? p.averageSellPrice ?? null
+  const low = p.lowPrice ?? null
+  return (trend != null || low != null) ? { trend, low } : null
+}
+
+function fmt(n, sym = '$') {
+  return n != null ? `${sym}${n.toFixed(2)}` : null
 }
 
 function buildHtml(favs) {
@@ -26,15 +51,39 @@ function buildHtml(favs) {
     day: 'numeric', month: 'long', year: 'numeric',
   })
 
+  const prices = getCachedPrices(cards.map(c => c.id))
+
+  let totalTcg = 0, tcgCount = 0
+  let totalCm = 0, cmCount = 0
+  for (const card of cards) {
+    const p = prices[card.id]
+    const tcg = bestTcgPrice(p?.tcgplayer)
+    const cm = bestCmPrice(p?.cardmarket)
+    if (tcg?.market != null) { totalTcg += tcg.market; tcgCount++ }
+    if (cm?.trend != null) { totalCm += cm.trend; cmCount++ }
+  }
+
+  const totalLine = (() => {
+    const parts = []
+    if (tcgCount > 0) parts.push(`<span class="total-val">$${totalTcg.toFixed(2)}</span><span class="total-label"> TCGPlayer market (${tcgCount}/${cards.length} cards)</span>`)
+    if (cmCount > 0) parts.push(`<span class="total-val">€${totalCm.toFixed(2)}</span><span class="total-label"> Cardmarket trend (${cmCount}/${cards.length} cards)</span>`)
+    return parts.length ? parts.join('<span class="total-sep"> &nbsp;·&nbsp; </span>') : '<span class="total-label">No price data cached — visit the Market tab first</span>'
+  })()
+
   const groupsHtml = groups.map(({ set, cards: setCards }) => {
     const cardsHtml = setCards.map(card => {
       const isRare = RARE_RARITIES.has(card.rarity)
+      const p = prices[card.id]
+      const tcg = bestTcgPrice(p?.tcgplayer)
+      const cm = bestCmPrice(p?.cardmarket)
+      const priceDisplay = fmt(tcg?.market) ?? fmt(cm?.trend, '€') ?? null
       return `<div class="card${isRare ? ' rare' : ''}">
   <img src="${esc(card.images?.small ?? '')}" alt="${esc(card.name)}" loading="lazy" />
   <div class="label">
     <span class="name">${esc(card.name)}</span>
     ${card.number ? `<span class="number">#${esc(card.number)}</span>` : ''}
     ${card.rarity ? `<span class="rarity${isRare ? ' is-rare' : ''}">${esc(card.rarity)}</span>` : ''}
+    ${priceDisplay ? `<span class="price${isRare ? ' price-rare' : ''}">${esc(priceDisplay)}</span>` : ''}
   </div>
 </div>`
     }).join('\n')
@@ -97,6 +146,10 @@ ${cardsHtml}
     }
     .star { color: var(--accent); }
     .subtitle { color: var(--text-muted); font-size: 0.85rem; margin-top: 0.4rem; }
+    .total { font-size: 0.9rem; margin-top: 0.6rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem; }
+    .total-val { color: var(--accent); font-weight: 800; font-size: 1.1rem; }
+    .total-label { color: var(--text-muted); font-size: 0.8rem; }
+    .total-sep { color: var(--border); }
 
     main { max-width: 1400px; margin: 0 auto; padding: 2rem 1rem; }
 
@@ -142,6 +195,8 @@ ${cardsHtml}
     .number { font-size: 0.7rem; color: var(--text-muted); }
     .rarity { font-size: 0.68rem; color: var(--text-muted); }
     .rarity.is-rare { color: var(--accent); font-weight: 600; }
+    .price { font-size: 0.72rem; color: #6ecfab; font-weight: 600; margin-top: 0.15rem; }
+    .price.price-rare { color: var(--accent); }
 
     footer {
       text-align: center;
@@ -158,6 +213,7 @@ ${cardsHtml}
     <div class="header-inner">
       <h1><span class="star">&#9733;</span> Pokemon Favourites</h1>
       <p class="subtitle">${cards.length} card${cards.length !== 1 ? 's' : ''} across ${groups.length} set${groups.length !== 1 ? 's' : ''} &mdash; Generated ${date}</p>
+      <p class="total">${totalLine}</p>
     </div>
   </header>
   <main>
