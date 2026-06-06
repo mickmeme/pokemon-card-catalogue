@@ -76,7 +76,8 @@ function buildHtml(favs) {
     const tcg = bestTcgPrice(p?.tcgplayer)
     const cm = bestCmPrice(p?.cardmarket)
     const priceDisplay = fmt(tcg?.market) ?? fmt(cm?.trend, '€') ?? null
-    return `<div class="card${isRare ? ' rare' : ''}">
+    return `<div class="card${isRare ? ' rare' : ''}" data-id="${esc(card.id)}">
+  <button class="remove-btn" onclick="removeCard('${esc(card.id)}')" title="Remove from favourites">&times;</button>
   <img src="${esc(card.images?.small ?? '')}" alt="${esc(card.name)}" loading="lazy" />
   <div class="label">
     <span class="name">${esc(card.name)}</span>
@@ -217,8 +218,31 @@ ${cardsHtml}
       border-radius: var(--radius);
       overflow: hidden;
       transition: transform 0.15s;
+      position: relative;
     }
     .card:hover { transform: translateY(-3px); }
+    .remove-btn {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(15,15,26,0.75);
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.15s, background 0.15s, color 0.15s;
+      z-index: 2;
+    }
+    .card:hover .remove-btn { opacity: 1; }
+    .remove-btn:hover { background: #c0392b; color: #fff; }
     .card.rare {
       border-color: var(--accent);
       box-shadow: 0 0 12px var(--rare-glow);
@@ -279,6 +303,22 @@ ${byPriceHtml}
       document.getElementById('view-price').style.display = v === 'price' ? '' : 'none';
       document.querySelectorAll('.toggle-btn').forEach(function(btn, i) {
         btn.classList.toggle('active', (v === 'collection' && i === 0) || (v === 'price' && i === 1));
+      });
+    }
+
+    function removeCard(id) {
+      try {
+        var favs = JSON.parse(localStorage.getItem('pokemon-favourites')) || {};
+        delete favs[id];
+        localStorage.setItem('pokemon-favourites', JSON.stringify(favs));
+      } catch(e) {}
+
+      document.querySelectorAll('[data-id="' + id + '"]').forEach(function(el) {
+        el.remove();
+      });
+
+      document.querySelectorAll('#view-collection .group').forEach(function(group) {
+        if (!group.querySelector('.card')) group.style.display = 'none';
       });
     }
   </script>
