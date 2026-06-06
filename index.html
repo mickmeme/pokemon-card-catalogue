@@ -42,6 +42,10 @@
     }
     .star { color: var(--accent); }
     .subtitle { color: var(--text-muted); font-size: 0.85rem; margin-top: 0.4rem; }
+    .total { font-size: 0.9rem; margin-top: 0.6rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem; }
+    .total-val { color: var(--accent); font-weight: 800; font-size: 1.1rem; }
+    .total-label { color: var(--text-muted); font-size: 0.8rem; }
+    .total-sep { color: var(--border); }
 
     main { max-width: 1400px; margin: 0 auto; padding: 2rem 1rem; }
 
@@ -87,6 +91,8 @@
     .number { font-size: 0.7rem; color: var(--text-muted); }
     .rarity { font-size: 0.68rem; color: var(--text-muted); }
     .rarity.is-rare { color: var(--accent); font-weight: 600; }
+    .price { font-size: 0.72rem; color: #6ecfab; font-weight: 600; margin-top: 0.15rem; }
+    .price.price-rare { color: var(--accent); }
 
     footer {
       text-align: center;
@@ -103,6 +109,7 @@
     <div class="header-inner">
       <h1><span class="star">&#9733;</span> Pokemon Favourites</h1>
       <p class="subtitle">719 cards across 130 sets &mdash; Generated 6 June 2026</p>
+      <p class="total"><span class="total-val">$89015.13</span><span class="total-label"> TCGPlayer market (690/719 cards)</span><span class="total-sep"> &nbsp;·&nbsp; </span><span class="total-val">€48601.70</span><span class="total-label"> Cardmarket trend (675/719 cards)</span></p>
     </div>
   </header>
   <main>
@@ -121,6 +128,7 @@
     <span class="name">Charizard</span>
     <span class="number">#4</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$572.03</span>
   </div>
 </div>
 <div class="card rare">
@@ -129,6 +137,7 @@
     <span class="name">Mewtwo</span>
     <span class="number">#10</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$77.61</span>
   </div>
 </div>
 <div class="card rare">
@@ -137,6 +146,7 @@
     <span class="name">Zapdos</span>
     <span class="number">#16</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$55.99</span>
   </div>
 </div>
 <div class="card rare">
@@ -145,6 +155,7 @@
     <span class="name">Blastoise</span>
     <span class="number">#2</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$229.23</span>
   </div>
 </div>
 <div class="card rare">
@@ -153,6 +164,7 @@
     <span class="name">Gyarados</span>
     <span class="number">#6</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$48.18</span>
   </div>
 </div>
 <div class="card rare">
@@ -161,6 +173,7 @@
     <span class="name">Venusaur</span>
     <span class="number">#15</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$149.37</span>
   </div>
 </div>
   </div>
@@ -180,6 +193,7 @@
     <span class="name">Snorlax</span>
     <span class="number">#11</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$292.79</span>
   </div>
 </div>
   </div>
@@ -199,6 +213,7 @@
     <span class="name">Ditto</span>
     <span class="number">#3</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$109.52</span>
   </div>
 </div>
 <div class="card rare">
@@ -207,6 +222,7 @@
     <span class="name">Gengar</span>
     <span class="number">#5</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$280.21</span>
   </div>
 </div>
   </div>
@@ -226,6 +242,7 @@
     <span class="name">Dark Blastoise</span>
     <span class="number">#3</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$331.37</span>
   </div>
 </div>
 <div class="card rare">
@@ -234,6 +251,7 @@
     <span class="name">Dark Dragonite</span>
     <span class="number">#5</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$283.70</span>
   </div>
 </div>
 <div class="card rare">
@@ -242,6 +260,7 @@
     <span class="name">Dark Machamp</span>
     <span class="number">#10</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$101.44</span>
   </div>
 </div>
 <div class="card rare">
@@ -250,6 +269,7 @@
     <span class="name">Dark Raichu</span>
     <span class="number">#83</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$215.76</span>
   </div>
 </div>
   </div>
@@ -269,6 +289,7 @@
     <span class="name">Lt. Surge's Magneton</span>
     <span class="number">#8</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$80.55</span>
   </div>
 </div>
 <div class="card rare">
@@ -277,6 +298,7 @@
     <span class="name">Misty's Tentacruel</span>
     <span class="number">#10</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$89.16</span>
   </div>
 </div>
 <div class="card rare">
@@ -285,6 +307,7 @@
     <span class="name">Sabrina's Gengar</span>
     <span class="number">#14</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$600.87</span>
   </div>
 </div>
   </div>
@@ -304,6 +327,7 @@
     <span class="name">Blaine's Charizard</span>
     <span class="number">#2</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$894.61</span>
   </div>
 </div>
 <div class="card rare">
@@ -312,6 +336,7 @@
     <span class="name">Koga's Ditto</span>
     <span class="number">#10</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$100.00</span>
   </div>
 </div>
 <div class="card rare">
@@ -320,6 +345,7 @@
     <span class="name">Misty's Gyarados</span>
     <span class="number">#13</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$360.24</span>
   </div>
 </div>
   </div>
@@ -339,6 +365,7 @@
     <span class="name">Azumarill</span>
     <span class="number">#2</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$72.05</span>
   </div>
 </div>
 <div class="card rare">
@@ -347,6 +374,7 @@
     <span class="name">Slowking</span>
     <span class="number">#14</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$202.94</span>
   </div>
 </div>
 <div class="card rare">
@@ -355,6 +383,7 @@
     <span class="name">Pichu</span>
     <span class="number">#12</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$326.65</span>
   </div>
 </div>
   </div>
@@ -374,6 +403,7 @@
     <span class="name">Espeon</span>
     <span class="number">#1</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$385.98</span>
   </div>
 </div>
 <div class="card rare">
@@ -382,6 +412,7 @@
     <span class="name">Kabutops</span>
     <span class="number">#6</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$134.00</span>
   </div>
 </div>
 <div class="card rare">
@@ -390,6 +421,7 @@
     <span class="name">Houndour</span>
     <span class="number">#5</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$139.24</span>
   </div>
 </div>
 <div class="card rare">
@@ -398,6 +430,7 @@
     <span class="name">Smeargle</span>
     <span class="number">#11</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$117.49</span>
   </div>
 </div>
 <div class="card rare">
@@ -406,6 +439,7 @@
     <span class="name">Umbreon</span>
     <span class="number">#13</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$499.20</span>
   </div>
 </div>
 <div class="card rare">
@@ -414,6 +448,7 @@
     <span class="name">Unown [A]</span>
     <span class="number">#14</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$84.97</span>
   </div>
 </div>
   </div>
@@ -433,6 +468,7 @@
     <span class="name">Marill</span>
     <span class="number">#11</span>
     
+    <span class="price">$126.57</span>
   </div>
 </div>
 <div class="card">
@@ -441,6 +477,7 @@
     <span class="name">Mew</span>
     <span class="number">#1</span>
     
+    <span class="price">$408.43</span>
   </div>
 </div>
   </div>
@@ -460,6 +497,7 @@
     <span class="name">Shining Magikarp</span>
     <span class="number">#66</span>
     <span class="rarity is-rare">Rare Shining</span>
+    <span class="price price-rare">$445.61</span>
   </div>
 </div>
 <div class="card rare">
@@ -468,6 +506,7 @@
     <span class="name">Shining Gyarados</span>
     <span class="number">#65</span>
     <span class="rarity is-rare">Rare Shining</span>
+    <span class="price price-rare">$573.61</span>
   </div>
 </div>
 <div class="card rare">
@@ -476,6 +515,7 @@
     <span class="name">Ho-oh</span>
     <span class="number">#7</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$70.01</span>
   </div>
 </div>
   </div>
@@ -495,6 +535,7 @@
     <span class="name">Shining Tyranitar</span>
     <span class="number">#113</span>
     <span class="rarity is-rare">Rare Shining</span>
+    <span class="price price-rare">$4249.99</span>
   </div>
 </div>
 <div class="card rare">
@@ -503,6 +544,7 @@
     <span class="name">Dark Gengar</span>
     <span class="number">#6</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$699.99</span>
   </div>
 </div>
   </div>
@@ -522,6 +564,7 @@
     <span class="name">Blastoise</span>
     <span class="number">#4</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$568.00</span>
   </div>
 </div>
 <div class="card rare">
@@ -530,6 +573,7 @@
     <span class="name">Cloyster</span>
     <span class="number">#8</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$91.38</span>
   </div>
 </div>
 <div class="card rare">
@@ -538,6 +582,7 @@
     <span class="name">Magby</span>
     <span class="number">#17</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$89.20</span>
   </div>
 </div>
 <div class="card rare">
@@ -546,6 +591,7 @@
     <span class="name">Mewtwo</span>
     <span class="number">#20</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$378.75</span>
   </div>
 </div>
 <div class="card rare">
@@ -554,6 +600,7 @@
     <span class="name">Pidgeot</span>
     <span class="number">#23</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$145.98</span>
   </div>
 </div>
   </div>
@@ -573,6 +620,7 @@
     <span class="name">Lugia</span>
     <span class="number">#149</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$2225.00</span>
   </div>
 </div>
 <div class="card rare">
@@ -581,6 +629,7 @@
     <span class="name">Houndoom</span>
     <span class="number">#H11</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$226.66</span>
   </div>
 </div>
 <div class="card rare">
@@ -589,6 +638,7 @@
     <span class="name">Hypno</span>
     <span class="number">#H12</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$106.86</span>
   </div>
 </div>
   </div>
@@ -608,6 +658,7 @@
     <span class="name">Gengar</span>
     <span class="number">#H9</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">€654.15</span>
   </div>
 </div>
 <div class="card rare">
@@ -616,6 +667,7 @@
     <span class="name">Charizard</span>
     <span class="number">#146</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">€626.66</span>
   </div>
 </div>
 <div class="card rare">
@@ -624,6 +676,7 @@
     <span class="name">Crobat</span>
     <span class="number">#147</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$350.00</span>
   </div>
 </div>
 <div class="card rare">
@@ -632,6 +685,7 @@
     <span class="name">Gyarados</span>
     <span class="number">#H10</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$1249.94</span>
   </div>
 </div>
 <div class="card rare">
@@ -640,6 +694,7 @@
     <span class="name">Starmie</span>
     <span class="number">#H28</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$147.79</span>
   </div>
 </div>
   </div>
@@ -659,6 +714,7 @@
     <span class="name">Hitmonchan ex</span>
     <span class="number">#98</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$74.50</span>
   </div>
 </div>
 <div class="card rare">
@@ -667,6 +723,7 @@
     <span class="name">Lapras ex</span>
     <span class="number">#99</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$118.32</span>
   </div>
 </div>
   </div>
@@ -686,6 +743,7 @@
     <span class="name">Aerodactyl ex</span>
     <span class="number">#94</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$155.33</span>
   </div>
 </div>
 <div class="card rare">
@@ -694,6 +752,7 @@
     <span class="name">Sableye</span>
     <span class="number">#10</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$116.47</span>
   </div>
 </div>
   </div>
@@ -713,6 +772,7 @@
     <span class="name">Dragonite ex</span>
     <span class="number">#90</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$527.25</span>
   </div>
 </div>
   </div>
@@ -732,6 +792,7 @@
     <span class="name">Absol</span>
     <span class="number">#96</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$164.86</span>
   </div>
 </div>
 <div class="card rare">
@@ -740,6 +801,7 @@
     <span class="name">Jirachi</span>
     <span class="number">#97</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$142.34</span>
   </div>
 </div>
 <div class="card rare">
@@ -748,6 +810,7 @@
     <span class="name">Suicune ex</span>
     <span class="number">#94</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$301.65</span>
   </div>
 </div>
 <div class="card rare">
@@ -756,6 +819,7 @@
     <span class="name">Team Aqua's Sharpedo</span>
     <span class="number">#5</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$46.00</span>
   </div>
 </div>
   </div>
@@ -775,6 +839,7 @@
     <span class="name">Ninetales ex</span>
     <span class="number">#96</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$232.50</span>
   </div>
 </div>
 <div class="card rare">
@@ -783,6 +848,7 @@
     <span class="name">Milotic</span>
     <span class="number">#12</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$69.57</span>
   </div>
 </div>
 <div class="card rare">
@@ -791,6 +857,7 @@
     <span class="name">Jirachi</span>
     <span class="number">#8</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$31.58</span>
   </div>
 </div>
 <div class="card rare">
@@ -799,6 +866,7 @@
     <span class="name">Groudon</span>
     <span class="number">#102</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$110.39</span>
   </div>
 </div>
   </div>
@@ -818,6 +886,7 @@
     <span class="name">Charmander</span>
     <span class="number">#113</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$94.99</span>
   </div>
 </div>
 <div class="card rare">
@@ -826,6 +895,7 @@
     <span class="name">Articuno ex</span>
     <span class="number">#114</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$168.17</span>
   </div>
 </div>
 <div class="card rare">
@@ -834,6 +904,7 @@
     <span class="name">Moltres ex</span>
     <span class="number">#115</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$180.86</span>
   </div>
 </div>
 <div class="card rare">
@@ -842,6 +913,7 @@
     <span class="name">Clefable ex</span>
     <span class="number">#106</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$89.33</span>
   </div>
 </div>
 <div class="card rare">
@@ -850,6 +922,7 @@
     <span class="name">Gengar ex</span>
     <span class="number">#108</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$1399.99</span>
   </div>
 </div>
   </div>
@@ -869,6 +942,7 @@
     <span class="name">Here Comes Team Rocket!</span>
     <span class="number">#111</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$375.65</span>
   </div>
 </div>
 <div class="card rare">
@@ -877,6 +951,7 @@
     <span class="name">Rocket's Sneasel ex</span>
     <span class="number">#103</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$232.50</span>
   </div>
 </div>
 <div class="card rare">
@@ -885,6 +960,7 @@
     <span class="name">Dark Electrode</span>
     <span class="number">#4</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$84.00</span>
   </div>
 </div>
 <div class="card rare">
@@ -893,6 +969,7 @@
     <span class="name">Dark Marowak</span>
     <span class="number">#7</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$127.46</span>
   </div>
 </div>
 <div class="card rare">
@@ -901,6 +978,7 @@
     <span class="name">Dark Slowking</span>
     <span class="number">#9</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$81.37</span>
   </div>
 </div>
 <div class="card rare">
@@ -909,6 +987,7 @@
     <span class="name">Dark Dragonite</span>
     <span class="number">#15</span>
     <span class="rarity is-rare">Rare</span>
+    <span class="price price-rare">$91.64</span>
   </div>
 </div>
 <div class="card rare">
@@ -917,6 +996,7 @@
     <span class="name">Azumarill</span>
     <span class="number">#1</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$31.95</span>
   </div>
 </div>
   </div>
@@ -936,6 +1016,7 @@
     <span class="name">Rayquaza ex</span>
     <span class="number">#102</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$252.49</span>
   </div>
 </div>
 <div class="card rare">
@@ -944,6 +1025,7 @@
     <span class="name">Altaria</span>
     <span class="number">#1</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$68.29</span>
   </div>
 </div>
 <div class="card rare">
@@ -952,6 +1034,7 @@
     <span class="name">Gyarados</span>
     <span class="number">#8</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$93.33</span>
   </div>
 </div>
   </div>
@@ -971,6 +1054,7 @@
     <span class="name">Altaria ex</span>
     <span class="number">#90</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$169.99</span>
   </div>
 </div>
 <div class="card rare">
@@ -979,6 +1063,7 @@
     <span class="name">Blaziken</span>
     <span class="number">#1</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$57.49</span>
   </div>
 </div>
 <div class="card rare">
@@ -987,6 +1072,7 @@
     <span class="name">Rayquaza</span>
     <span class="number">#9</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$249.98</span>
   </div>
 </div>
   </div>
@@ -1006,6 +1092,7 @@
     <span class="name">Celebi ex</span>
     <span class="number">#117</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$355.00</span>
   </div>
 </div>
 <div class="card rare">
@@ -1014,6 +1101,7 @@
     <span class="name">Blissey ex</span>
     <span class="number">#101</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$113.40</span>
   </div>
 </div>
 <div class="card rare">
@@ -1022,6 +1110,7 @@
     <span class="name">Espeon ex</span>
     <span class="number">#102</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$299.42</span>
   </div>
 </div>
 <div class="card rare">
@@ -1030,6 +1119,7 @@
     <span class="name">Steelix ex</span>
     <span class="number">#109</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$169.21</span>
   </div>
 </div>
 <div class="card rare">
@@ -1038,6 +1128,7 @@
     <span class="name">Unown</span>
     <span class="number">#?</span>
     <span class="rarity is-rare">Rare</span>
+    <span class="price price-rare">$123.49</span>
   </div>
 </div>
   </div>
@@ -1057,6 +1148,7 @@
     <span class="name">Azumarill</span>
     <span class="number">#114</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$62.66</span>
   </div>
 </div>
 <div class="card rare">
@@ -1065,6 +1157,7 @@
     <span class="name">Starmie δ</span>
     <span class="number">#15</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$34.37</span>
   </div>
 </div>
   </div>
@@ -1084,6 +1177,7 @@
     <span class="name">Banette ex</span>
     <span class="number">#85</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$126.87</span>
   </div>
 </div>
 <div class="card rare">
@@ -1092,6 +1186,7 @@
     <span class="name">Kabutops</span>
     <span class="number">#7</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$38.53</span>
   </div>
 </div>
   </div>
@@ -1111,6 +1206,7 @@
     <span class="name">Mew ex</span>
     <span class="number">#100</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$512.44</span>
   </div>
 </div>
 <div class="card rare">
@@ -1119,6 +1215,7 @@
     <span class="name">Gyarados δ</span>
     <span class="number">#8</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$196.25</span>
   </div>
 </div>
   </div>
@@ -1138,6 +1235,7 @@
     <span class="name">Jirachi ex</span>
     <span class="number">#94</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$239.99</span>
   </div>
 </div>
 <div class="card rare">
@@ -1146,6 +1244,7 @@
     <span class="name">Blastoise δ</span>
     <span class="number">#2</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$240.32</span>
   </div>
 </div>
 <div class="card rare">
@@ -1154,6 +1253,7 @@
     <span class="name">Swampert ex</span>
     <span class="number">#98</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$255.00</span>
   </div>
 </div>
   </div>
@@ -1173,6 +1273,7 @@
     <span class="name">Altaria ex δ</span>
     <span class="number">#90</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$92.66</span>
   </div>
 </div>
 <div class="card rare">
@@ -1181,6 +1282,7 @@
     <span class="name">Latios ex δ</span>
     <span class="number">#96</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$329.98</span>
   </div>
 </div>
   </div>
@@ -1200,6 +1302,7 @@
     <span class="name">Absol ex</span>
     <span class="number">#92</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$229.86</span>
   </div>
 </div>
   </div>
@@ -1219,6 +1322,7 @@
     <span class="name">Staraptor</span>
     <span class="number">#16</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$20.35</span>
   </div>
 </div>
   </div>
@@ -1238,6 +1342,7 @@
     <span class="name">Entei</span>
     <span class="number">#4</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$38.37</span>
   </div>
 </div>
   </div>
@@ -1257,6 +1362,7 @@
     <span class="name">Darkrai</span>
     <span class="number">#3</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$26.75</span>
   </div>
 </div>
   </div>
@@ -1276,6 +1382,7 @@
     <span class="name">Articuno</span>
     <span class="number">#1</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$42.76</span>
   </div>
 </div>
 <div class="card rare">
@@ -1284,6 +1391,7 @@
     <span class="name">Palkia</span>
     <span class="number">#11</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$56.83</span>
   </div>
 </div>
   </div>
@@ -1303,6 +1411,7 @@
     <span class="name">Dragonite</span>
     <span class="number">#2</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$116.47</span>
   </div>
 </div>
 <div class="card rare">
@@ -1311,6 +1420,7 @@
     <span class="name">Regigigas</span>
     <span class="number">#15</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$10.90</span>
   </div>
 </div>
   </div>
@@ -1330,6 +1440,7 @@
     <span class="name">Infernape</span>
     <span class="number">#3</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$21.62</span>
   </div>
 </div>
   </div>
@@ -1349,6 +1460,7 @@
     <span class="name">Blastoise</span>
     <span class="number">#2</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$37.68</span>
   </div>
 </div>
   </div>
@@ -1368,6 +1480,7 @@
     <span class="name">Surfing Pikachu</span>
     <span class="number">#114</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$310.50</span>
   </div>
 </div>
 <div class="card rare">
@@ -1376,6 +1489,7 @@
     <span class="name">Lucario GL</span>
     <span class="number">#8</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$26.14</span>
   </div>
 </div>
   </div>
@@ -1395,6 +1509,7 @@
     <span class="name">Rayquaza C</span>
     <span class="number">#8</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$71.84</span>
   </div>
 </div>
   </div>
@@ -1414,6 +1529,7 @@
     <span class="name">Arcanine</span>
     <span class="number">#1</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$64.47</span>
   </div>
 </div>
 <div class="card rare">
@@ -1422,6 +1538,7 @@
     <span class="name">Ninetales</span>
     <span class="number">#7</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$32.75</span>
   </div>
 </div>
 <div class="card rare">
@@ -1430,6 +1547,7 @@
     <span class="name">Gyarados</span>
     <span class="number">#123</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$132.76</span>
   </div>
 </div>
   </div>
@@ -1449,6 +1567,7 @@
     <span class="name">Manaphy</span>
     <span class="number">#3</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$9.87</span>
   </div>
 </div>
 <div class="card rare">
@@ -1457,6 +1576,7 @@
     <span class="name">Magmortar</span>
     <span class="number">#2</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$4.97</span>
   </div>
 </div>
   </div>
@@ -1476,6 +1596,7 @@
     <span class="name">Scizor</span>
     <span class="number">#7</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$54.66</span>
   </div>
 </div>
 <div class="card rare">
@@ -1484,6 +1605,7 @@
     <span class="name">Smeargle</span>
     <span class="number">#8</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$7.89</span>
   </div>
 </div>
   </div>
@@ -1503,6 +1625,7 @@
     <span class="name">Gyarados</span>
     <span class="number">#7</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$52.34</span>
   </div>
 </div>
 <div class="card rare">
@@ -1511,6 +1634,7 @@
     <span class="name">Ninetales</span>
     <span class="number">#17</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$48.32</span>
   </div>
 </div>
 <div class="card rare">
@@ -1519,6 +1643,7 @@
     <span class="name">Kyogre</span>
     <span class="number">#SL6</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">€127.58</span>
   </div>
 </div>
 <div class="card rare">
@@ -1527,6 +1652,7 @@
     <span class="name">Ho-Oh</span>
     <span class="number">#SL5</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">€85.82</span>
   </div>
 </div>
 <div class="card rare">
@@ -1535,6 +1661,7 @@
     <span class="name">Suicune</span>
     <span class="number">#SL11</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$325.00</span>
   </div>
 </div>
   </div>
@@ -1554,6 +1681,7 @@
     <span class="name">Darkrai</span>
     <span class="number">#BW73</span>
     <span class="rarity">Promo</span>
+    <span class="price">$206.14</span>
   </div>
 </div>
   </div>
@@ -1573,6 +1701,7 @@
     <span class="name">Zekrom</span>
     <span class="number">#114</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$128.81</span>
   </div>
 </div>
   </div>
@@ -1592,6 +1721,7 @@
     <span class="name">Reshiram-EX</span>
     <span class="number">#95</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$244.65</span>
   </div>
 </div>
   </div>
@@ -1611,6 +1741,7 @@
     <span class="name">Kyogre-EX</span>
     <span class="number">#104</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$318.96</span>
   </div>
 </div>
 <div class="card rare">
@@ -1619,6 +1750,7 @@
     <span class="name">Groudon-EX</span>
     <span class="number">#54</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$79.97</span>
   </div>
 </div>
   </div>
@@ -1638,6 +1770,7 @@
     <span class="name">Ho-Oh-EX</span>
     <span class="number">#119</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$244.99</span>
   </div>
 </div>
 <div class="card rare">
@@ -1646,6 +1779,7 @@
     <span class="name">Mew-EX</span>
     <span class="number">#120</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$423.51</span>
   </div>
 </div>
   </div>
@@ -1665,6 +1799,7 @@
     <span class="name">Dragonair</span>
     <span class="number">#4</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$13.48</span>
   </div>
 </div>
 <div class="card rare">
@@ -1673,6 +1808,7 @@
     <span class="name">Dratini</span>
     <span class="number">#2</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$13.63</span>
   </div>
 </div>
 <div class="card rare">
@@ -1681,6 +1817,7 @@
     <span class="name">Rayquaza</span>
     <span class="number">#11</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$41.54</span>
   </div>
 </div>
   </div>
@@ -1700,6 +1837,7 @@
     <span class="name">Celebi-EX</span>
     <span class="number">#141</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$129.02</span>
   </div>
 </div>
 <div class="card rare">
@@ -1708,6 +1846,7 @@
     <span class="name">White Kyurem-EX</span>
     <span class="number">#146</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$509.97</span>
   </div>
 </div>
 <div class="card rare">
@@ -1716,6 +1855,7 @@
     <span class="name">Charizard</span>
     <span class="number">#20</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$43.14</span>
   </div>
 </div>
   </div>
@@ -1735,6 +1875,7 @@
     <span class="name">Charizard</span>
     <span class="number">#136</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$1150.00</span>
   </div>
 </div>
 <div class="card rare">
@@ -1743,6 +1884,7 @@
     <span class="name">Articuno-EX</span>
     <span class="number">#132</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$329.18</span>
   </div>
 </div>
 <div class="card rare">
@@ -1751,6 +1893,7 @@
     <span class="name">Lugia-EX</span>
     <span class="number">#134</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$725.00</span>
   </div>
 </div>
 <div class="card rare">
@@ -1759,6 +1902,7 @@
     <span class="name">Weezing</span>
     <span class="number">#58</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$2.55</span>
   </div>
 </div>
   </div>
@@ -1778,6 +1922,7 @@
     <span class="name">Exeggcute</span>
     <span class="number">#102</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$120.00</span>
   </div>
 </div>
 <div class="card rare">
@@ -1786,6 +1931,7 @@
     <span class="name">Jirachi-EX</span>
     <span class="number">#98</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$158.18</span>
   </div>
 </div>
 <div class="card rare">
@@ -1794,6 +1940,7 @@
     <span class="name">Dialga-EX</span>
     <span class="number">#99</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$215.12</span>
   </div>
 </div>
 <div class="card rare">
@@ -1802,6 +1949,7 @@
     <span class="name">Palkia-EX</span>
     <span class="number">#100</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$545.13</span>
   </div>
 </div>
   </div>
@@ -1821,6 +1969,7 @@
     <span class="name">Xerneas-EX</span>
     <span class="number">#XY07</span>
     <span class="rarity">Promo</span>
+    <span class="price">$6.32</span>
   </div>
 </div>
 <div class="card">
@@ -1829,6 +1978,7 @@
     <span class="name">Charizard-EX</span>
     <span class="number">#XY17</span>
     <span class="rarity">Promo</span>
+    <span class="price">$35.12</span>
   </div>
 </div>
 <div class="card">
@@ -1837,6 +1987,7 @@
     <span class="name">Ditto</span>
     <span class="number">#XY40</span>
     <span class="rarity">Promo</span>
+    <span class="price">$80.00</span>
   </div>
 </div>
 <div class="card">
@@ -1845,6 +1996,7 @@
     <span class="name">Rayquaza-EX</span>
     <span class="number">#XY69</span>
     <span class="rarity">Promo</span>
+    <span class="price">$139.10</span>
   </div>
 </div>
 <div class="card">
@@ -1853,6 +2005,7 @@
     <span class="name">Jirachi</span>
     <span class="number">#XY67a</span>
     <span class="rarity">Promo</span>
+    <span class="price">€160.04</span>
   </div>
 </div>
 <div class="card">
@@ -1861,6 +2014,7 @@
     <span class="name">Palkia</span>
     <span class="number">#XY75</span>
     <span class="rarity">Promo</span>
+    <span class="price">$58.20</span>
   </div>
 </div>
 <div class="card">
@@ -1869,6 +2023,7 @@
     <span class="name">Zekrom</span>
     <span class="number">#XY76</span>
     <span class="rarity">Promo</span>
+    <span class="price">$88.87</span>
   </div>
 </div>
 <div class="card">
@@ -1877,6 +2032,7 @@
     <span class="name">Pikachu-EX</span>
     <span class="number">#XY84</span>
     <span class="rarity">Promo</span>
+    <span class="price">$62.89</span>
   </div>
 </div>
 <div class="card">
@@ -1885,6 +2041,7 @@
     <span class="name">Charizard-EX</span>
     <span class="number">#XY121</span>
     <span class="rarity">Promo</span>
+    <span class="price">$166.52</span>
   </div>
 </div>
 <div class="card">
@@ -1893,6 +2050,7 @@
     <span class="name">Pikachu-EX</span>
     <span class="number">#XY124</span>
     <span class="rarity">Promo</span>
+    <span class="price">$403.04</span>
   </div>
 </div>
 <div class="card">
@@ -1901,6 +2059,7 @@
     <span class="name">Mewtwo-EX</span>
     <span class="number">#XY125</span>
     <span class="rarity">Promo</span>
+    <span class="price">$84.60</span>
   </div>
 </div>
 <div class="card">
@@ -1909,6 +2068,7 @@
     <span class="name">Magikarp</span>
     <span class="number">#XY143</span>
     <span class="rarity">Promo</span>
+    <span class="price">$70.86</span>
   </div>
 </div>
 <div class="card">
@@ -1917,6 +2077,7 @@
     <span class="name">M Gengar-EX</span>
     <span class="number">#XY166</span>
     <span class="rarity">Promo</span>
+    <span class="price">$257.01</span>
   </div>
 </div>
 <div class="card">
@@ -1925,6 +2086,7 @@
     <span class="name">Karen</span>
     <span class="number">#XY177a</span>
     <span class="rarity">Promo</span>
+    <span class="price">€57.57</span>
   </div>
 </div>
 <div class="card">
@@ -1933,6 +2095,7 @@
     <span class="name">M Sharpedo-EX</span>
     <span class="number">#XY200</span>
     <span class="rarity">Promo</span>
+    <span class="price">$23.66</span>
   </div>
 </div>
 <div class="card">
@@ -1941,6 +2104,7 @@
     <span class="name">M Sharpedo-EX</span>
     <span class="number">#XY200a</span>
     <span class="rarity">Promo</span>
+    <span class="price">€72.65</span>
   </div>
 </div>
   </div>
@@ -1960,6 +2124,7 @@
     <span class="name">Shaymin-EX</span>
     <span class="number">#RC21</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$40.10</span>
   </div>
 </div>
 <div class="card rare">
@@ -1968,6 +2133,7 @@
     <span class="name">Reshiram</span>
     <span class="number">#RC22</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$156.25</span>
   </div>
 </div>
 <div class="card rare">
@@ -1976,6 +2142,7 @@
     <span class="name">Emolga</span>
     <span class="number">#RC23</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$79.18</span>
   </div>
 </div>
 <div class="card rare">
@@ -1984,6 +2151,7 @@
     <span class="name">Mew-EX</span>
     <span class="number">#RC24</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$173.43</span>
   </div>
 </div>
 <div class="card rare">
@@ -1992,6 +2160,7 @@
     <span class="name">Reshiram</span>
     <span class="number">#28</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$27.35</span>
   </div>
 </div>
 <div class="card rare">
@@ -2000,6 +2169,7 @@
     <span class="name">Tornadus</span>
     <span class="number">#108</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$2.62</span>
   </div>
 </div>
   </div>
@@ -2019,6 +2189,7 @@
     <span class="name">Blastoise-EX</span>
     <span class="number">#142</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$150.11</span>
   </div>
 </div>
 <div class="card rare">
@@ -2027,6 +2198,7 @@
     <span class="name">Venusaur-EX</span>
     <span class="number">#141</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$84.00</span>
   </div>
 </div>
 <div class="card rare">
@@ -2035,6 +2207,7 @@
     <span class="name">Xerneas-EX</span>
     <span class="number">#146</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$92.59</span>
   </div>
 </div>
   </div>
@@ -2054,6 +2227,7 @@
     <span class="name">M Charizard-EX</span>
     <span class="number">#108</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$874.58</span>
   </div>
 </div>
 <div class="card rare">
@@ -2062,6 +2236,7 @@
     <span class="name">M Charizard-EX</span>
     <span class="number">#69</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$279.26</span>
   </div>
 </div>
   </div>
@@ -2081,6 +2256,7 @@
     <span class="name">M Lucario-EX</span>
     <span class="number">#55a</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">€16.61</span>
   </div>
 </div>
 <div class="card rare">
@@ -2089,6 +2265,7 @@
     <span class="name">Dragonite-EX</span>
     <span class="number">#108</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$117.05</span>
   </div>
 </div>
 <div class="card rare">
@@ -2097,6 +2274,7 @@
     <span class="name">Lucario-EX</span>
     <span class="number">#54</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$10.52</span>
   </div>
 </div>
   </div>
@@ -2116,6 +2294,7 @@
     <span class="name">M Gengar-EX</span>
     <span class="number">#121</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$524.60</span>
   </div>
 </div>
 <div class="card rare">
@@ -2124,6 +2303,7 @@
     <span class="name">Gengar-EX</span>
     <span class="number">#114</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$719.55</span>
   </div>
 </div>
 <div class="card rare">
@@ -2132,6 +2312,7 @@
     <span class="name">M Gengar-EX</span>
     <span class="number">#35</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$181.64</span>
   </div>
 </div>
   </div>
@@ -2151,6 +2332,7 @@
     <span class="name">Wailord-EX</span>
     <span class="number">#147</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$58.29</span>
   </div>
 </div>
 <div class="card rare">
@@ -2159,6 +2341,7 @@
     <span class="name">Sharpedo-EX</span>
     <span class="number">#152</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$38.58</span>
   </div>
 </div>
 <div class="card rare">
@@ -2167,6 +2350,7 @@
     <span class="name">Gardevoir-EX</span>
     <span class="number">#155</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$62.03</span>
   </div>
 </div>
   </div>
@@ -2186,6 +2370,7 @@
     <span class="name">Team Aqua's Kyogre-EX</span>
     <span class="number">#6</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$466.59</span>
   </div>
 </div>
 <div class="card rare">
@@ -2194,6 +2379,7 @@
     <span class="name">Team Magma's Groudon-EX</span>
     <span class="number">#15</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$467.94</span>
   </div>
 </div>
   </div>
@@ -2213,6 +2399,7 @@
     <span class="name">M Rayquaza-EX</span>
     <span class="number">#105</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$357.92</span>
   </div>
 </div>
   </div>
@@ -2232,6 +2419,7 @@
     <span class="name">Primal Kyogre-EX</span>
     <span class="number">#96</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$359.54</span>
   </div>
 </div>
 <div class="card rare">
@@ -2240,6 +2428,7 @@
     <span class="name">Primal Groudon-EX</span>
     <span class="number">#97</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$315.16</span>
   </div>
 </div>
 <div class="card rare">
@@ -2248,6 +2437,7 @@
     <span class="name">M Rayquaza-EX</span>
     <span class="number">#98</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$957.50</span>
   </div>
 </div>
 <div class="card rare">
@@ -2256,6 +2446,7 @@
     <span class="name">M Sceptile-EX</span>
     <span class="number">#85</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$121.07</span>
   </div>
 </div>
 <div class="card rare">
@@ -2264,6 +2455,7 @@
     <span class="name">Kyurem-EX</span>
     <span class="number">#86</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$34.84</span>
   </div>
 </div>
 <div class="card rare">
@@ -2272,6 +2464,7 @@
     <span class="name">Gyarados</span>
     <span class="number">#21</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$65.81</span>
   </div>
 </div>
   </div>
@@ -2291,6 +2484,7 @@
     <span class="name">Mewtwo-EX</span>
     <span class="number">#164</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$168.57</span>
   </div>
 </div>
 <div class="card rare">
@@ -2299,6 +2493,7 @@
     <span class="name">Glalie-EX</span>
     <span class="number">#155</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$14.84</span>
   </div>
 </div>
 <div class="card rare">
@@ -2307,6 +2502,7 @@
     <span class="name">Brigette</span>
     <span class="number">#161</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$34.20</span>
   </div>
 </div>
 <div class="card rare">
@@ -2315,6 +2511,7 @@
     <span class="name">Giovanni's Scheme</span>
     <span class="number">#162</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$24.22</span>
   </div>
 </div>
 <div class="card rare">
@@ -2323,6 +2520,7 @@
     <span class="name">Gengar</span>
     <span class="number">#60</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$35.52</span>
   </div>
 </div>
   </div>
@@ -2342,6 +2540,7 @@
     <span class="name">Gyarados-EX</span>
     <span class="number">#123</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$184.18</span>
   </div>
 </div>
 <div class="card rare">
@@ -2350,6 +2549,7 @@
     <span class="name">Gyarados-EX</span>
     <span class="number">#114</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$73.15</span>
   </div>
 </div>
 <div class="card rare">
@@ -2358,6 +2558,7 @@
     <span class="name">Ho-Oh-EX</span>
     <span class="number">#121</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$41.07</span>
   </div>
 </div>
 <div class="card rare">
@@ -2366,6 +2567,7 @@
     <span class="name">Skyla</span>
     <span class="number">#122</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$55.41</span>
   </div>
 </div>
 <div class="card rare">
@@ -2374,6 +2576,7 @@
     <span class="name">M Gyarados-EX</span>
     <span class="number">#27</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$43.51</span>
   </div>
 </div>
   </div>
@@ -2393,6 +2596,7 @@
     <span class="name">Flareon-EX</span>
     <span class="number">#RC28</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$169.26</span>
   </div>
 </div>
 <div class="card rare">
@@ -2401,6 +2605,7 @@
     <span class="name">Pikachu</span>
     <span class="number">#RC29</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$133.14</span>
   </div>
 </div>
 <div class="card rare">
@@ -2409,6 +2614,7 @@
     <span class="name">Sylveon-EX</span>
     <span class="number">#RC32</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$164.77</span>
   </div>
 </div>
 <div class="card rare">
@@ -2417,6 +2623,7 @@
     <span class="name">M Charizard-EX</span>
     <span class="number">#12</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$151.81</span>
   </div>
 </div>
 <div class="card rare">
@@ -2425,6 +2632,7 @@
     <span class="name">M Blastoise-EX</span>
     <span class="number">#18</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$28.69</span>
   </div>
 </div>
 <div class="card rare">
@@ -2433,6 +2641,7 @@
     <span class="name">Vaporeon-EX</span>
     <span class="number">#24</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$19.54</span>
   </div>
 </div>
 <div class="card rare">
@@ -2441,6 +2650,7 @@
     <span class="name">Jolteon-EX</span>
     <span class="number">#28</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$27.32</span>
   </div>
 </div>
 <div class="card rare">
@@ -2449,6 +2659,7 @@
     <span class="name">Sylveon-EX</span>
     <span class="number">#RC21</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$86.16</span>
   </div>
 </div>
   </div>
@@ -2468,6 +2679,7 @@
     <span class="name">M Alakazam-EX</span>
     <span class="number">#118</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$80.29</span>
   </div>
 </div>
 <div class="card rare">
@@ -2476,6 +2688,7 @@
     <span class="name">Team Rocket's Handiwork</span>
     <span class="number">#124</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$25.41</span>
   </div>
 </div>
 <div class="card rare">
@@ -2484,6 +2697,7 @@
     <span class="name">Lucario</span>
     <span class="number">#63</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$2.91</span>
   </div>
 </div>
   </div>
@@ -2503,6 +2717,7 @@
     <span class="name">Volcanion-EX</span>
     <span class="number">#115</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$36.13</span>
   </div>
 </div>
 <div class="card rare">
@@ -2511,6 +2726,7 @@
     <span class="name">M Steelix-EX</span>
     <span class="number">#109</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$26.67</span>
   </div>
 </div>
 <div class="card rare">
@@ -2519,6 +2735,7 @@
     <span class="name">Yveltal</span>
     <span class="number">#65</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$0.58</span>
   </div>
 </div>
   </div>
@@ -2538,6 +2755,7 @@
     <span class="name">Surfing Pikachu</span>
     <span class="number">#111</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$10.08</span>
   </div>
 </div>
 <div class="card rare">
@@ -2546,6 +2764,7 @@
     <span class="name">Here Comes Team Rocket!</span>
     <span class="number">#113</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$0.99</span>
   </div>
 </div>
 <div class="card rare">
@@ -2554,6 +2773,7 @@
     <span class="name">M Venusaur-EX</span>
     <span class="number">#100</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$36.40</span>
   </div>
 </div>
 <div class="card rare">
@@ -2562,6 +2782,7 @@
     <span class="name">M Charizard-EX</span>
     <span class="number">#101</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$143.41</span>
   </div>
 </div>
 <div class="card rare">
@@ -2570,6 +2791,7 @@
     <span class="name">M Blastoise-EX</span>
     <span class="number">#102</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$62.48</span>
   </div>
 </div>
 <div class="card rare">
@@ -2578,6 +2800,7 @@
     <span class="name">Mewtwo-EX</span>
     <span class="number">#103</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$40.92</span>
   </div>
 </div>
 <div class="card rare">
@@ -2586,6 +2809,7 @@
     <span class="name">Pidgeot-EX</span>
     <span class="number">#104</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$11.52</span>
   </div>
 </div>
 <div class="card rare">
@@ -2594,6 +2818,7 @@
     <span class="name">Dragonite-EX</span>
     <span class="number">#106</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$52.08</span>
   </div>
 </div>
 <div class="card rare">
@@ -2602,6 +2827,7 @@
     <span class="name">Misty's Determination</span>
     <span class="number">#108</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$34.68</span>
   </div>
 </div>
 <div class="card rare">
@@ -2610,6 +2836,7 @@
     <span class="name">M Slowbro-EX</span>
     <span class="number">#27</span>
     <span class="rarity is-rare">Rare Holo EX</span>
+    <span class="price price-rare">$9.90</span>
   </div>
 </div>
   </div>
@@ -2629,6 +2856,7 @@
     <span class="name">Espeon-GX</span>
     <span class="number">#152</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$48.87</span>
   </div>
 </div>
 <div class="card rare">
@@ -2637,6 +2865,7 @@
     <span class="name">Lunala-GX</span>
     <span class="number">#153</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$15.55</span>
   </div>
 </div>
 <div class="card rare">
@@ -2645,6 +2874,7 @@
     <span class="name">Umbreon-GX</span>
     <span class="number">#154</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$121.91</span>
   </div>
 </div>
 <div class="card rare">
@@ -2653,6 +2883,7 @@
     <span class="name">Team Skull Grunt</span>
     <span class="number">#149</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$7.34</span>
   </div>
 </div>
   </div>
@@ -2672,6 +2903,7 @@
     <span class="name">Snorlax-GX</span>
     <span class="number">#SM05</span>
     <span class="rarity">Promo</span>
+    <span class="price">$19.67</span>
   </div>
 </div>
 <div class="card">
@@ -2680,6 +2912,7 @@
     <span class="name">Lunala-GX</span>
     <span class="number">#SM17</span>
     <span class="rarity">Promo</span>
+    <span class="price">$3.76</span>
   </div>
 </div>
 <div class="card">
@@ -2688,6 +2921,7 @@
     <span class="name">Ho-Oh-GX</span>
     <span class="number">#SM80</span>
     <span class="rarity">Promo</span>
+    <span class="price">$18.02</span>
   </div>
 </div>
 <div class="card">
@@ -2696,6 +2930,7 @@
     <span class="name">Salamence-GX</span>
     <span class="number">#SM139</span>
     <span class="rarity">Promo</span>
+    <span class="price">$15.40</span>
   </div>
 </div>
 <div class="card">
@@ -2704,6 +2939,7 @@
     <span class="name">Dragonite-GX</span>
     <span class="number">#SM156</span>
     <span class="rarity">Promo</span>
+    <span class="price">$83.67</span>
   </div>
 </div>
 <div class="card">
@@ -2712,6 +2948,7 @@
     <span class="name">Magikarp &amp; Wailord-GX</span>
     <span class="number">#SM166</span>
     <span class="rarity">Promo</span>
+    <span class="price">$126.77</span>
   </div>
 </div>
 <div class="card">
@@ -2720,6 +2957,7 @@
     <span class="name">Celebi &amp; Venusaur-GX</span>
     <span class="number">#SM167</span>
     <span class="rarity">Promo</span>
+    <span class="price">$76.94</span>
   </div>
 </div>
 <div class="card">
@@ -2728,6 +2966,7 @@
     <span class="name">Pikachu &amp; Zekrom-GX</span>
     <span class="number">#SM168</span>
     <span class="rarity">Promo</span>
+    <span class="price">$209.68</span>
   </div>
 </div>
 <div class="card">
@@ -2736,6 +2975,7 @@
     <span class="name">Mewtwo &amp; Mew-GX</span>
     <span class="number">#SM191</span>
     <span class="rarity">Promo</span>
+    <span class="price">$341.80</span>
   </div>
 </div>
 <div class="card">
@@ -2744,6 +2984,7 @@
     <span class="name">Charizard-GX</span>
     <span class="number">#SM195</span>
     <span class="rarity">Promo</span>
+    <span class="price">$28.81</span>
   </div>
 </div>
 <div class="card">
@@ -2752,6 +2993,7 @@
     <span class="name">Moltres &amp; Zapdos &amp; Articuno-GX</span>
     <span class="number">#SM210</span>
     <span class="rarity">Promo</span>
+    <span class="price">$169.73</span>
   </div>
 </div>
 <div class="card">
@@ -2760,6 +3002,7 @@
     <span class="name">Eevee-GX</span>
     <span class="number">#SM233</span>
     <span class="rarity">Promo</span>
+    <span class="price">$147.85</span>
   </div>
 </div>
 <div class="card">
@@ -2768,6 +3011,7 @@
     <span class="name">Espeon &amp; Deoxys-GX</span>
     <span class="number">#SM240</span>
     <span class="rarity">Promo</span>
+    <span class="price">$126.70</span>
   </div>
 </div>
 <div class="card">
@@ -2776,6 +3020,7 @@
     <span class="name">Pikachu &amp; Zekrom-GX</span>
     <span class="number">#SM248</span>
     <span class="rarity">Promo</span>
+    <span class="price">$39.10</span>
   </div>
 </div>
   </div>
@@ -2795,6 +3040,7 @@
     <span class="name">Sylveon-GX</span>
     <span class="number">#158</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$142.51</span>
   </div>
 </div>
   </div>
@@ -2814,6 +3060,7 @@
     <span class="name">Bodybuilding Dumbbells</span>
     <span class="number">#161</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$6.66</span>
   </div>
 </div>
 <div class="card rare">
@@ -2822,6 +3069,7 @@
     <span class="name">Charizard-GX</span>
     <span class="number">#150</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$503.46</span>
   </div>
 </div>
 <div class="card rare">
@@ -2830,6 +3078,7 @@
     <span class="name">Machamp-GX</span>
     <span class="number">#154</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$31.08</span>
   </div>
 </div>
   </div>
@@ -2849,6 +3098,7 @@
     <span class="name">Raichu-GX</span>
     <span class="number">#75</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$41.58</span>
   </div>
 </div>
 <div class="card rare">
@@ -2857,6 +3107,7 @@
     <span class="name">Mewtwo-GX</span>
     <span class="number">#76</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$77.74</span>
   </div>
 </div>
 <div class="card rare">
@@ -2865,6 +3116,7 @@
     <span class="name">Shining Mew</span>
     <span class="number">#40</span>
     <span class="rarity is-rare">Rare Shining</span>
+    <span class="price price-rare">$141.22</span>
   </div>
 </div>
 <div class="card rare">
@@ -2873,6 +3125,7 @@
     <span class="name">Shining Jirachi</span>
     <span class="number">#42</span>
     <span class="rarity is-rare">Rare Shining</span>
+    <span class="price price-rare">$26.55</span>
   </div>
 </div>
   </div>
@@ -2892,6 +3145,7 @@
     <span class="name">Gyarados-GX</span>
     <span class="number">#112</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$72.32</span>
   </div>
 </div>
 <div class="card rare">
@@ -2900,6 +3154,7 @@
     <span class="name">Nihilego-GX</span>
     <span class="number">#114</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$12.88</span>
   </div>
 </div>
 <div class="card rare">
@@ -2908,6 +3163,7 @@
     <span class="name">Guzzlord-GX</span>
     <span class="number">#116</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$14.71</span>
   </div>
 </div>
 <div class="card rare">
@@ -2916,6 +3172,7 @@
     <span class="name">Gyarados-GX</span>
     <span class="number">#101</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$24.60</span>
   </div>
 </div>
 <div class="card rare">
@@ -2924,6 +3181,7 @@
     <span class="name">Olivia</span>
     <span class="number">#111</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$22.00</span>
   </div>
 </div>
   </div>
@@ -2943,6 +3201,7 @@
     <span class="name">Lusamine</span>
     <span class="number">#153</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$157.11</span>
   </div>
 </div>
   </div>
@@ -2962,6 +3221,7 @@
     <span class="name">Lucario-GX</span>
     <span class="number">#135</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$118.24</span>
   </div>
 </div>
 <div class="card rare">
@@ -2970,6 +3230,7 @@
     <span class="name">Zygarde-GX</span>
     <span class="number">#136</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$56.54</span>
   </div>
 </div>
 <div class="card rare">
@@ -2978,6 +3239,7 @@
     <span class="name">Ultra Necrozma-GX</span>
     <span class="number">#127</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$23.95</span>
   </div>
 </div>
   </div>
@@ -2997,6 +3259,7 @@
     <span class="name">Electrode-GX</span>
     <span class="number">#172</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$20.49</span>
   </div>
 </div>
 <div class="card rare">
@@ -3005,6 +3268,7 @@
     <span class="name">Articuno-GX</span>
     <span class="number">#154</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$29.15</span>
   </div>
 </div>
   </div>
@@ -3024,6 +3288,7 @@
     <span class="name">Hydreigon</span>
     <span class="number">#33</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$0.58</span>
   </div>
 </div>
   </div>
@@ -3043,6 +3308,7 @@
     <span class="name">Mimikyu-GX</span>
     <span class="number">#226</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$232.55</span>
   </div>
 </div>
 <div class="card rare">
@@ -3051,6 +3317,7 @@
     <span class="name">Whitney</span>
     <span class="number">#214</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$93.37</span>
   </div>
 </div>
   </div>
@@ -3070,6 +3337,7 @@
     <span class="name">Magikarp &amp; Wailord-GX</span>
     <span class="number">#183</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$120.26</span>
   </div>
 </div>
 <div class="card rare">
@@ -3078,6 +3346,7 @@
     <span class="name">Gengar &amp; Mimikyu-GX</span>
     <span class="number">#186</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$377.74</span>
   </div>
 </div>
 <div class="card rare">
@@ -3086,6 +3355,7 @@
     <span class="name">Latias &amp; Latios-GX</span>
     <span class="number">#190</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$172.02</span>
   </div>
 </div>
 <div class="card rare">
@@ -3094,6 +3364,7 @@
     <span class="name">Eevee &amp; Snorlax-GX</span>
     <span class="number">#191</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$262.07</span>
   </div>
 </div>
 <div class="card rare">
@@ -3102,6 +3373,7 @@
     <span class="name">Magikarp &amp; Wailord-GX</span>
     <span class="number">#161</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$842.84</span>
   </div>
 </div>
 <div class="card rare">
@@ -3110,6 +3382,7 @@
     <span class="name">Pikachu &amp; Zekrom-GX</span>
     <span class="number">#162</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$143.88</span>
   </div>
 </div>
 <div class="card rare">
@@ -3118,6 +3391,7 @@
     <span class="name">Latias &amp; Latios-GX</span>
     <span class="number">#170</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$2472.45</span>
   </div>
 </div>
 <div class="card rare">
@@ -3126,6 +3400,7 @@
     <span class="name">Brock's Grit</span>
     <span class="number">#172</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$63.77</span>
   </div>
 </div>
 <div class="card rare">
@@ -3134,6 +3409,7 @@
     <span class="name">Gengar &amp; Mimikyu-GX</span>
     <span class="number">#53</span>
     <span class="rarity is-rare">Rare Holo GX</span>
+    <span class="price price-rare">$312.92</span>
   </div>
 </div>
   </div>
@@ -3153,6 +3429,7 @@
     <span class="name">Muk &amp; Alolan Muk-GX</span>
     <span class="number">#220</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$36.25</span>
   </div>
 </div>
 <div class="card rare">
@@ -3161,6 +3438,7 @@
     <span class="name">Greninja &amp; Zoroark-GX</span>
     <span class="number">#222</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$90.40</span>
   </div>
 </div>
 <div class="card rare">
@@ -3169,6 +3447,7 @@
     <span class="name">Gardevoir &amp; Sylveon-GX</span>
     <span class="number">#225</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$141.29</span>
   </div>
 </div>
 <div class="card rare">
@@ -3177,6 +3456,7 @@
     <span class="name">Pheromosa &amp; Buzzwole-GX</span>
     <span class="number">#192</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$86.02</span>
   </div>
 </div>
 <div class="card rare">
@@ -3185,6 +3465,7 @@
     <span class="name">Marshadow &amp; Machamp-GX</span>
     <span class="number">#199</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$225.46</span>
   </div>
 </div>
 <div class="card rare">
@@ -3193,6 +3474,7 @@
     <span class="name">Gardevoir &amp; Sylveon-GX</span>
     <span class="number">#205</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$592.73</span>
   </div>
 </div>
 <div class="card rare">
@@ -3201,6 +3483,7 @@
     <span class="name">Red's Challenge</span>
     <span class="number">#213</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$134.49</span>
   </div>
 </div>
 <div class="card rare">
@@ -3209,6 +3492,7 @@
     <span class="name">Reshiram &amp; Charizard-GX</span>
     <span class="number">#20</span>
     <span class="rarity is-rare">Rare Holo GX</span>
+    <span class="price price-rare">$55.18</span>
   </div>
 </div>
 <div class="card rare">
@@ -3217,6 +3501,7 @@
     <span class="name">Muk &amp; Alolan Muk-GX</span>
     <span class="number">#61</span>
     <span class="rarity is-rare">Rare Holo GX</span>
+    <span class="price price-rare">$18.66</span>
   </div>
 </div>
 <div class="card rare">
@@ -3225,6 +3510,7 @@
     <span class="name">Greninja &amp; Zoroark-GX</span>
     <span class="number">#107</span>
     <span class="rarity is-rare">Rare Holo GX</span>
+    <span class="price price-rare">$50.33</span>
   </div>
 </div>
 <div class="card rare">
@@ -3233,6 +3519,7 @@
     <span class="name">Gardevoir &amp; Sylveon-GX</span>
     <span class="number">#130</span>
     <span class="rarity is-rare">Rare Holo GX</span>
+    <span class="price price-rare">$65.34</span>
   </div>
 </div>
   </div>
@@ -3252,6 +3539,7 @@
     <span class="name">Slowpoke &amp; Psyduck-GX</span>
     <span class="number">#239</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$162.69</span>
   </div>
 </div>
 <div class="card rare">
@@ -3260,6 +3548,7 @@
     <span class="name">Raichu &amp; Alolan Raichu-GX</span>
     <span class="number">#241</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$135.15</span>
   </div>
 </div>
 <div class="card rare">
@@ -3268,6 +3557,7 @@
     <span class="name">Mewtwo &amp; Mew-GX</span>
     <span class="number">#242</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$380.90</span>
   </div>
 </div>
 <div class="card rare">
@@ -3276,6 +3566,7 @@
     <span class="name">Slowpoke &amp; Psyduck-GX</span>
     <span class="number">#218</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$292.68</span>
   </div>
 </div>
 <div class="card rare">
@@ -3284,6 +3575,7 @@
     <span class="name">Raichu &amp; Alolan Raichu-GX</span>
     <span class="number">#221</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$324.84</span>
   </div>
 </div>
 <div class="card rare">
@@ -3292,6 +3584,7 @@
     <span class="name">Misty's Favor</span>
     <span class="number">#235</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$330.70</span>
   </div>
 </div>
 <div class="card rare">
@@ -3300,6 +3593,7 @@
     <span class="name">Slowpoke &amp; Psyduck-GX</span>
     <span class="number">#35</span>
     <span class="rarity is-rare">Rare Holo GX</span>
+    <span class="price price-rare">$110.92</span>
   </div>
 </div>
 <div class="card rare">
@@ -3308,6 +3602,7 @@
     <span class="name">Raichu &amp; Alolan Raichu-GX</span>
     <span class="number">#54</span>
     <span class="rarity is-rare">Rare Holo GX</span>
+    <span class="price price-rare">$32.97</span>
   </div>
 </div>
 <div class="card rare">
@@ -3316,6 +3611,7 @@
     <span class="name">Mewtwo &amp; Mew-GX</span>
     <span class="number">#71</span>
     <span class="rarity is-rare">Rare Holo GX</span>
+    <span class="price price-rare">$111.10</span>
   </div>
 </div>
 <div class="card rare">
@@ -3324,6 +3620,7 @@
     <span class="name">Espeon &amp; Deoxys-GX</span>
     <span class="number">#72</span>
     <span class="rarity is-rare">Rare Holo GX</span>
+    <span class="price price-rare">$40.09</span>
   </div>
 </div>
   </div>
@@ -3343,6 +3640,7 @@
     <span class="name">Charizard-GX</span>
     <span class="number">#SV49</span>
     <span class="rarity is-rare">Rare Shiny GX</span>
+    <span class="price price-rare">$660.38</span>
   </div>
 </div>
 <div class="card rare">
@@ -3351,6 +3649,7 @@
     <span class="name">Ho-Oh-GX</span>
     <span class="number">#SV50</span>
     <span class="rarity is-rare">Rare Shiny GX</span>
+    <span class="price price-rare">$40.69</span>
   </div>
 </div>
 <div class="card rare">
@@ -3359,6 +3658,7 @@
     <span class="name">Electrode-GX</span>
     <span class="number">#SV57</span>
     <span class="rarity is-rare">Rare Shiny GX</span>
+    <span class="price price-rare">$14.87</span>
   </div>
 </div>
 <div class="card rare">
@@ -3367,6 +3667,7 @@
     <span class="name">Nihilego-GX</span>
     <span class="number">#SV62</span>
     <span class="rarity is-rare">Rare Shiny GX</span>
+    <span class="price price-rare">$17.05</span>
   </div>
 </div>
 <div class="card rare">
@@ -3375,6 +3676,7 @@
     <span class="name">Zygarde-GX</span>
     <span class="number">#SV65</span>
     <span class="rarity is-rare">Rare Shiny GX</span>
+    <span class="price price-rare">$39.05</span>
   </div>
 </div>
 <div class="card rare">
@@ -3383,6 +3685,7 @@
     <span class="name">Sylveon-GX</span>
     <span class="number">#SV76</span>
     <span class="rarity is-rare">Rare Shiny GX</span>
+    <span class="price price-rare">$181.11</span>
   </div>
 </div>
 <div class="card rare">
@@ -3391,6 +3694,7 @@
     <span class="name">Gible</span>
     <span class="number">#SV38</span>
     <span class="rarity is-rare">Rare Shiny</span>
+    <span class="price price-rare">$5.06</span>
   </div>
 </div>
   </div>
@@ -3410,6 +3714,7 @@
     <span class="name">Moltres &amp; Zapdos &amp; Articuno-GX</span>
     <span class="number">#69</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$45.40</span>
   </div>
 </div>
 <div class="card rare">
@@ -3418,6 +3723,7 @@
     <span class="name">Giovanni's Exile</span>
     <span class="number">#67</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$4.46</span>
   </div>
 </div>
 <div class="card rare">
@@ -3426,6 +3732,7 @@
     <span class="name">Jessie &amp; James</span>
     <span class="number">#68</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$88.59</span>
   </div>
 </div>
 <div class="card rare">
@@ -3434,6 +3741,7 @@
     <span class="name">Starmie-GX</span>
     <span class="number">#14</span>
     <span class="rarity is-rare">Rare Holo GX</span>
+    <span class="price price-rare">$2.01</span>
   </div>
 </div>
 <div class="card rare">
@@ -3442,6 +3750,7 @@
     <span class="name">Moltres &amp; Zapdos &amp; Articuno-GX</span>
     <span class="number">#44</span>
     <span class="rarity is-rare">Rare Holo GX</span>
+    <span class="price price-rare">$66.08</span>
   </div>
 </div>
 <div class="card rare">
@@ -3450,6 +3759,7 @@
     <span class="name">Jessie &amp; James</span>
     <span class="number">#58</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$1.70</span>
   </div>
 </div>
   </div>
@@ -3469,6 +3779,7 @@
     <span class="name">Torkoal</span>
     <span class="number">#237</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$12.84</span>
   </div>
 </div>
 <div class="card rare">
@@ -3477,6 +3788,7 @@
     <span class="name">Piplup</span>
     <span class="number">#239</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$78.57</span>
   </div>
 </div>
 <div class="card rare">
@@ -3485,6 +3797,7 @@
     <span class="name">Wishiwashi</span>
     <span class="number">#240</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$15.94</span>
   </div>
 </div>
 <div class="card rare">
@@ -3493,6 +3806,7 @@
     <span class="name">Pikachu</span>
     <span class="number">#241</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$230.63</span>
   </div>
 </div>
 <div class="card rare">
@@ -3501,6 +3815,7 @@
     <span class="name">Koffing</span>
     <span class="number">#243</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$40.02</span>
   </div>
 </div>
 <div class="card rare">
@@ -3509,6 +3824,7 @@
     <span class="name">Gallade</span>
     <span class="number">#244</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$14.51</span>
   </div>
 </div>
 <div class="card rare">
@@ -3517,6 +3833,7 @@
     <span class="name">Mimikyu</span>
     <span class="number">#245</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$67.47</span>
   </div>
 </div>
 <div class="card rare">
@@ -3525,6 +3842,7 @@
     <span class="name">Charizard &amp; Braixen-GX</span>
     <span class="number">#251</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$107.30</span>
   </div>
 </div>
 <div class="card rare">
@@ -3533,6 +3851,7 @@
     <span class="name">Blastoise &amp; Piplup-GX</span>
     <span class="number">#253</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$110.29</span>
   </div>
 </div>
 <div class="card rare">
@@ -3541,6 +3860,7 @@
     <span class="name">Reshiram &amp; Zekrom-GX</span>
     <span class="number">#259</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$228.79</span>
   </div>
 </div>
 <div class="card rare">
@@ -3549,6 +3869,7 @@
     <span class="name">Mega Lopunny &amp; Jigglypuff-GX</span>
     <span class="number">#261</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$66.16</span>
   </div>
 </div>
 <div class="card rare">
@@ -3557,6 +3878,7 @@
     <span class="name">Togepi &amp; Cleffa &amp; Igglybuff-GX</span>
     <span class="number">#143a</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">€406.20</span>
   </div>
 </div>
 <div class="card rare">
@@ -3565,6 +3887,7 @@
     <span class="name">Vileplume-GX</span>
     <span class="number">#211</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$117.56</span>
   </div>
 </div>
 <div class="card rare">
@@ -3573,6 +3896,7 @@
     <span class="name">Blastoise &amp; Piplup-GX</span>
     <span class="number">#215</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$432.48</span>
   </div>
 </div>
 <div class="card rare">
@@ -3581,6 +3905,7 @@
     <span class="name">Solgaleo &amp; Lunala-GX</span>
     <span class="number">#216</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$301.81</span>
   </div>
 </div>
 <div class="card rare">
@@ -3589,6 +3914,7 @@
     <span class="name">Reshiram &amp; Zekrom-GX</span>
     <span class="number">#222</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$402.58</span>
   </div>
 </div>
 <div class="card rare">
@@ -3597,6 +3923,7 @@
     <span class="name">Mega Lopunny &amp; Jigglypuff-GX</span>
     <span class="number">#226</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$240.59</span>
   </div>
 </div>
 <div class="card rare">
@@ -3605,6 +3932,7 @@
     <span class="name">Lillie's Full Force</span>
     <span class="number">#230</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$174.47</span>
   </div>
 </div>
 <div class="card rare">
@@ -3613,6 +3941,7 @@
     <span class="name">Mallow &amp; Lana</span>
     <span class="number">#231</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$97.52</span>
   </div>
 </div>
 <div class="card rare">
@@ -3621,6 +3950,7 @@
     <span class="name">Professor Oak's Setup</span>
     <span class="number">#233</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$79.22</span>
   </div>
 </div>
 <div class="card rare">
@@ -3629,6 +3959,7 @@
     <span class="name">Red &amp; Blue</span>
     <span class="number">#234</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$189.10</span>
   </div>
 </div>
 <div class="card rare">
@@ -3637,6 +3968,7 @@
     <span class="name">Roller Skater</span>
     <span class="number">#235</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$20.55</span>
   </div>
 </div>
 <div class="card rare">
@@ -3645,6 +3977,7 @@
     <span class="name">Rosa</span>
     <span class="number">#236</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$272.64</span>
   </div>
 </div>
 <div class="card rare">
@@ -3653,6 +3986,7 @@
     <span class="name">Charizard &amp; Braixen-GX</span>
     <span class="number">#22</span>
     <span class="rarity is-rare">Rare Holo GX</span>
+    <span class="price price-rare">$36.07</span>
   </div>
 </div>
 <div class="card rare">
@@ -3661,6 +3995,7 @@
     <span class="name">Blastoise &amp; Piplup-GX</span>
     <span class="number">#38</span>
     <span class="rarity is-rare">Rare Holo GX</span>
+    <span class="price price-rare">$83.99</span>
   </div>
 </div>
 <div class="card rare">
@@ -3669,6 +4004,7 @@
     <span class="name">Togepi &amp; Cleffa &amp; Igglybuff-GX</span>
     <span class="number">#143</span>
     <span class="rarity is-rare">Rare Holo GX</span>
+    <span class="price price-rare">$61.93</span>
   </div>
 </div>
 <div class="card rare">
@@ -3677,6 +4013,7 @@
     <span class="name">Reshiram &amp; Zekrom-GX</span>
     <span class="number">#157</span>
     <span class="rarity is-rare">Rare Holo GX</span>
+    <span class="price price-rare">$90.31</span>
   </div>
 </div>
 <div class="card rare">
@@ -3685,6 +4022,7 @@
     <span class="name">Lunala</span>
     <span class="number">#102</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$1.46</span>
   </div>
 </div>
   </div>
@@ -3704,6 +4042,7 @@
     <span class="name">Meowth VMAX</span>
     <span class="number">#SWSH005</span>
     <span class="rarity">Promo</span>
+    <span class="price">$12.33</span>
   </div>
 </div>
 <div class="card">
@@ -3712,6 +4051,7 @@
     <span class="name">Meowth V</span>
     <span class="number">#SWSH004</span>
     <span class="rarity">Promo</span>
+    <span class="price">$3.05</span>
   </div>
 </div>
 <div class="card">
@@ -3720,6 +4060,7 @@
     <span class="name">Cinderace V</span>
     <span class="number">#SWSH015</span>
     <span class="rarity">Promo</span>
+    <span class="price">$0.90</span>
   </div>
 </div>
 <div class="card">
@@ -3728,6 +4069,7 @@
     <span class="name">Pikachu</span>
     <span class="number">#SWSH020</span>
     <span class="rarity">Promo</span>
+    <span class="price">$93.99</span>
   </div>
 </div>
 <div class="card">
@@ -3736,6 +4078,7 @@
     <span class="name">Zamazenta V</span>
     <span class="number">#SWSH019</span>
     <span class="rarity">Promo</span>
+    <span class="price">$0.96</span>
   </div>
 </div>
 <div class="card">
@@ -3744,6 +4087,7 @@
     <span class="name">Morpeko</span>
     <span class="number">#SWSH031</span>
     <span class="rarity">Promo</span>
+    <span class="price">$0.47</span>
   </div>
 </div>
 <div class="card">
@@ -3752,6 +4096,7 @@
     <span class="name">Eternatus VMAX</span>
     <span class="number">#SWSH045</span>
     <span class="rarity">Promo</span>
+    <span class="price">$2.72</span>
   </div>
 </div>
 <div class="card">
@@ -3760,6 +4105,7 @@
     <span class="name">Pikachu VMAX</span>
     <span class="number">#SWSH062</span>
     <span class="rarity">Promo</span>
+    <span class="price">$16.36</span>
   </div>
 </div>
 <div class="card">
@@ -3768,6 +4114,7 @@
     <span class="name">Eternatus V</span>
     <span class="number">#SWSH064</span>
     <span class="rarity">Promo</span>
+    <span class="price">$1.31</span>
   </div>
 </div>
 <div class="card">
@@ -3776,6 +4123,7 @@
     <span class="name">Special Delivery Charizard</span>
     <span class="number">#SWSH075</span>
     <span class="rarity">Promo</span>
+    <span class="price">$192.57</span>
   </div>
 </div>
 <div class="card">
@@ -3784,6 +4132,7 @@
     <span class="name">Crobat VMAX</span>
     <span class="number">#SWSH099</span>
     <span class="rarity">Promo</span>
+    <span class="price">$2.14</span>
   </div>
 </div>
 <div class="card">
@@ -3792,6 +4141,7 @@
     <span class="name">Lance's Charizard V</span>
     <span class="number">#SWSH133</span>
     <span class="rarity">Promo</span>
+    <span class="price">$12.66</span>
   </div>
 </div>
 <div class="card">
@@ -3800,6 +4150,7 @@
     <span class="name">Dark Sylveon V</span>
     <span class="number">#SWSH134</span>
     <span class="rarity">Promo</span>
+    <span class="price">$9.20</span>
   </div>
 </div>
 <div class="card">
@@ -3808,6 +4159,7 @@
     <span class="name">Pikachu V-UNION</span>
     <span class="number">#SWSH139</span>
     <span class="rarity">Promo</span>
+    <span class="price">$8.48</span>
   </div>
 </div>
 <div class="card">
@@ -3816,6 +4168,7 @@
     <span class="name">Pikachu V-UNION</span>
     <span class="number">#SWSH140</span>
     <span class="rarity">Promo</span>
+    <span class="price">$8.95</span>
   </div>
 </div>
 <div class="card">
@@ -3824,6 +4177,7 @@
     <span class="name">Pikachu V-UNION</span>
     <span class="number">#SWSH141</span>
     <span class="rarity">Promo</span>
+    <span class="price">$9.36</span>
   </div>
 </div>
 <div class="card">
@@ -3832,6 +4186,7 @@
     <span class="name">Pikachu V-UNION</span>
     <span class="number">#SWSH142</span>
     <span class="rarity">Promo</span>
+    <span class="price">$15.96</span>
   </div>
 </div>
 <div class="card">
@@ -3840,6 +4195,7 @@
     <span class="name">Pikachu V</span>
     <span class="number">#SWSH143</span>
     <span class="rarity">Promo</span>
+    <span class="price">$9.59</span>
   </div>
 </div>
 <div class="card">
@@ -3848,6 +4204,7 @@
     <span class="name">Pikachu V</span>
     <span class="number">#SWSH145</span>
     <span class="rarity">Promo</span>
+    <span class="price">$115.50</span>
   </div>
 </div>
 <div class="card">
@@ -3856,6 +4213,7 @@
     <span class="name">Vaporeon VMAX</span>
     <span class="number">#SWSH182</span>
     <span class="rarity">Promo</span>
+    <span class="price">$92.21</span>
   </div>
 </div>
 <div class="card">
@@ -3864,6 +4222,7 @@
     <span class="name">Flareon V</span>
     <span class="number">#SWSH179</span>
     <span class="rarity">Promo</span>
+    <span class="price">$88.63</span>
   </div>
 </div>
 <div class="card">
@@ -3872,6 +4231,7 @@
     <span class="name">Jolteon V</span>
     <span class="number">#SWSH183</span>
     <span class="rarity">Promo</span>
+    <span class="price">$79.21</span>
   </div>
 </div>
 <div class="card">
@@ -3880,6 +4240,7 @@
     <span class="name">Arceus V</span>
     <span class="number">#SWSH204</span>
     <span class="rarity">Promo</span>
+    <span class="price">$30.82</span>
   </div>
 </div>
 <div class="card">
@@ -3888,6 +4249,7 @@
     <span class="name">Gengar</span>
     <span class="number">#SWSH241</span>
     <span class="rarity">Promo</span>
+    <span class="price">$31.60</span>
   </div>
 </div>
 <div class="card">
@@ -3896,6 +4258,7 @@
     <span class="name">Boss's Orders</span>
     <span class="number">#SWSH251</span>
     <span class="rarity">Promo</span>
+    <span class="price">$13.17</span>
   </div>
 </div>
 <div class="card">
@@ -3904,6 +4267,7 @@
     <span class="name">Origin Forme Dialga V</span>
     <span class="number">#SWSH255</span>
     <span class="rarity">Promo</span>
+    <span class="price">$3.64</span>
   </div>
 </div>
 <div class="card">
@@ -3912,6 +4276,7 @@
     <span class="name">Charizard VSTAR</span>
     <span class="number">#SWSH262</span>
     <span class="rarity">Promo</span>
+    <span class="price">$98.62</span>
   </div>
 </div>
 <div class="card">
@@ -3920,6 +4285,7 @@
     <span class="name">Charizard VMAX</span>
     <span class="number">#SWSH261</span>
     <span class="rarity">Promo</span>
+    <span class="price">$44.93</span>
   </div>
 </div>
 <div class="card">
@@ -3928,6 +4294,7 @@
     <span class="name">Charizard V</span>
     <span class="number">#SWSH260</span>
     <span class="rarity">Promo</span>
+    <span class="price">$61.45</span>
   </div>
 </div>
   </div>
@@ -3947,6 +4314,7 @@
     <span class="name">Zacian V</span>
     <span class="number">#211</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$19.11</span>
   </div>
 </div>
 <div class="card rare">
@@ -3955,6 +4323,7 @@
     <span class="name">Morpeko VMAX</span>
     <span class="number">#204</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$24.18</span>
   </div>
 </div>
 <div class="card rare">
@@ -3963,6 +4332,7 @@
     <span class="name">Snorlax VMAX</span>
     <span class="number">#142</span>
     <span class="rarity is-rare">Rare Holo VMAX</span>
+    <span class="price price-rare">$62.67</span>
   </div>
 </div>
   </div>
@@ -3982,6 +4352,7 @@
     <span class="name">Butterfree VMAX</span>
     <span class="number">#190</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$23.59</span>
   </div>
 </div>
   </div>
@@ -4001,6 +4372,7 @@
     <span class="name">Charizard VMAX</span>
     <span class="number">#74</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$193.99</span>
   </div>
 </div>
 <div class="card rare">
@@ -4009,6 +4381,7 @@
     <span class="name">Alcremie VMAX</span>
     <span class="number">#23</span>
     <span class="rarity is-rare">Rare Holo VMAX</span>
+    <span class="price price-rare">$5.56</span>
   </div>
 </div>
   </div>
@@ -4028,6 +4401,7 @@
     <span class="name">Pikachu VMAX</span>
     <span class="number">#188</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$203.94</span>
   </div>
 </div>
 <div class="card rare">
@@ -4036,6 +4410,7 @@
     <span class="name">Zacian</span>
     <span class="number">#82</span>
     <span class="rarity is-rare">Amazing Rare</span>
+    <span class="price price-rare">$4.92</span>
   </div>
 </div>
 <div class="card rare">
@@ -4044,6 +4419,7 @@
     <span class="name">Jirachi</span>
     <span class="number">#119</span>
     <span class="rarity is-rare">Amazing Rare</span>
+    <span class="price price-rare">$9.82</span>
   </div>
 </div>
   </div>
@@ -4063,6 +4439,7 @@
     <span class="name">Ditto VMAX</span>
     <span class="number">#SV119</span>
     <span class="rarity is-rare">Rare Holo VMAX</span>
+    <span class="price price-rare">$15.70</span>
   </div>
 </div>
 <div class="card rare">
@@ -4071,6 +4448,7 @@
     <span class="name">Toxel</span>
     <span class="number">#SV041</span>
     <span class="rarity is-rare">Rare Shiny</span>
+    <span class="price price-rare">$4.60</span>
   </div>
 </div>
 <div class="card rare">
@@ -4079,6 +4457,7 @@
     <span class="name">Galarian Sirfetch'd</span>
     <span class="number">#SV064</span>
     <span class="rarity is-rare">Rare Shiny</span>
+    <span class="price price-rare">$1.45</span>
   </div>
 </div>
 <div class="card rare">
@@ -4087,6 +4466,7 @@
     <span class="name">Minccino</span>
     <span class="number">#SV093</span>
     <span class="rarity is-rare">Rare Shiny</span>
+    <span class="price price-rare">$12.11</span>
   </div>
 </div>
   </div>
@@ -4106,6 +4486,7 @@
     <span class="name">Alcremie VMAX</span>
     <span class="number">#73</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$5.08</span>
   </div>
 </div>
 <div class="card rare">
@@ -4114,6 +4495,7 @@
     <span class="name">Yveltal</span>
     <span class="number">#46</span>
     <span class="rarity is-rare">Amazing Rare</span>
+    <span class="price price-rare">$2.29</span>
   </div>
 </div>
 <div class="card rare">
@@ -4122,6 +4504,7 @@
     <span class="name">Morpeko VMAX</span>
     <span class="number">#38</span>
     <span class="rarity is-rare">Rare Holo VMAX</span>
+    <span class="price price-rare">$2.86</span>
   </div>
 </div>
 <div class="card rare">
@@ -4130,6 +4513,7 @@
     <span class="name">Alcremie V</span>
     <span class="number">#64</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$6.69</span>
   </div>
 </div>
 <div class="card rare">
@@ -4138,6 +4522,7 @@
     <span class="name">Poké Kid</span>
     <span class="number">#70</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$10.55</span>
   </div>
 </div>
 <div class="card rare">
@@ -4146,6 +4531,7 @@
     <span class="name">Skyla</span>
     <span class="number">#72</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$12.40</span>
   </div>
 </div>
   </div>
@@ -4165,6 +4551,7 @@
     <span class="name">Octillery</span>
     <span class="number">#178</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$6.13</span>
   </div>
 </div>
 <div class="card rare">
@@ -4173,6 +4560,7 @@
     <span class="name">Single Strike Urshifu VMAX</span>
     <span class="number">#168</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$33.04</span>
   </div>
 </div>
 <div class="card rare">
@@ -4181,6 +4569,7 @@
     <span class="name">Rapid Strike Urshifu VMAX</span>
     <span class="number">#170</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$73.65</span>
   </div>
 </div>
 <div class="card rare">
@@ -4189,6 +4578,7 @@
     <span class="name">Phoebe</span>
     <span class="number">#175</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$9.05</span>
   </div>
 </div>
 <div class="card rare">
@@ -4197,6 +4587,7 @@
     <span class="name">Cheryl</span>
     <span class="number">#173</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$7.00</span>
   </div>
 </div>
 <div class="card rare">
@@ -4205,6 +4596,7 @@
     <span class="name">Corviknight VMAX</span>
     <span class="number">#110</span>
     <span class="rarity is-rare">Rare Holo VMAX</span>
+    <span class="price price-rare">$2.05</span>
   </div>
 </div>
 <div class="card rare">
@@ -4213,6 +4605,7 @@
     <span class="name">Mimikyu V</span>
     <span class="number">#148</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$46.19</span>
   </div>
 </div>
 <div class="card rare">
@@ -4221,6 +4614,7 @@
     <span class="name">Tyranitar V</span>
     <span class="number">#155</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$264.72</span>
   </div>
 </div>
   </div>
@@ -4240,6 +4634,7 @@
     <span class="name">Electrode</span>
     <span class="number">#222</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$16.02</span>
   </div>
 </div>
 <div class="card rare">
@@ -4248,6 +4643,7 @@
     <span class="name">Doctor</span>
     <span class="number">#214</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$9.08</span>
   </div>
 </div>
 <div class="card rare">
@@ -4256,6 +4652,7 @@
     <span class="name">Blaziken VMAX</span>
     <span class="number">#21</span>
     <span class="rarity is-rare">Rare Holo VMAX</span>
+    <span class="price price-rare">$4.63</span>
   </div>
 </div>
 <div class="card rare">
@@ -4264,6 +4661,7 @@
     <span class="name">Galarian Rapidash V</span>
     <span class="number">#168</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$86.50</span>
   </div>
 </div>
 <div class="card rare">
@@ -4272,6 +4670,7 @@
     <span class="name">Galarian Zapdos V</span>
     <span class="number">#174</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$61.20</span>
   </div>
 </div>
 <div class="card rare">
@@ -4280,6 +4679,7 @@
     <span class="name">Galarian Moltres V</span>
     <span class="number">#177</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$221.16</span>
   </div>
 </div>
 <div class="card rare">
@@ -4288,6 +4688,7 @@
     <span class="name">Galarian Slowking V</span>
     <span class="number">#179</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$89.65</span>
   </div>
 </div>
   </div>
@@ -4307,6 +4708,7 @@
     <span class="name">Sylveon VMAX</span>
     <span class="number">#212</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$383.79</span>
   </div>
 </div>
 <div class="card rare">
@@ -4315,6 +4717,7 @@
     <span class="name">Espeon V</span>
     <span class="number">#180</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$223.34</span>
   </div>
 </div>
 <div class="card rare">
@@ -4323,6 +4726,7 @@
     <span class="name">Rayquaza V</span>
     <span class="number">#194</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$419.18</span>
   </div>
 </div>
   </div>
@@ -4342,6 +4746,7 @@
     <span class="name">Flying Pikachu VMAX</span>
     <span class="number">#7</span>
     <span class="rarity is-rare">Rare Holo VMAX</span>
+    <span class="price price-rare">$8.50</span>
   </div>
 </div>
 <div class="card rare">
@@ -4350,6 +4755,7 @@
     <span class="name">Mew</span>
     <span class="number">#11</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$4.27</span>
   </div>
 </div>
 <div class="card rare">
@@ -4358,6 +4764,7 @@
     <span class="name">Professor's Research (Professor Oak)</span>
     <span class="number">#23</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$0.33</span>
   </div>
 </div>
 <div class="card rare">
@@ -4366,6 +4773,7 @@
     <span class="name">Kyogre</span>
     <span class="number">#3</span>
     <span class="rarity is-rare">Rare</span>
+    <span class="price price-rare">$0.42</span>
   </div>
 </div>
   </div>
@@ -4385,6 +4793,7 @@
     <span class="name">Here Comes Team Rocket!</span>
     <span class="number">#15</span>
     <span class="rarity is-rare">Classic Collection</span>
+    <span class="price price-rare">$0.95</span>
   </div>
 </div>
 <div class="card rare">
@@ -4393,6 +4802,7 @@
     <span class="name">Rocket's Zapdos</span>
     <span class="number">#15</span>
     <span class="rarity is-rare">Classic Collection</span>
+    <span class="price price-rare">$4.76</span>
   </div>
 </div>
 <div class="card rare">
@@ -4401,6 +4811,7 @@
     <span class="name">_____'s Pikachu</span>
     <span class="number">#24</span>
     <span class="rarity is-rare">Classic Collection</span>
+    <span class="price price-rare">$48.33</span>
   </div>
 </div>
   </div>
@@ -4420,6 +4831,7 @@
     <span class="name">Chandelure VMAX</span>
     <span class="number">#265</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$7.92</span>
   </div>
 </div>
 <div class="card rare">
@@ -4428,6 +4840,7 @@
     <span class="name">Mew VMAX</span>
     <span class="number">#269</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$250.13</span>
   </div>
 </div>
 <div class="card rare">
@@ -4436,6 +4849,7 @@
     <span class="name">Gengar VMAX</span>
     <span class="number">#271</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$944.49</span>
   </div>
 </div>
 <div class="card rare">
@@ -4444,6 +4858,7 @@
     <span class="name">Shauna</span>
     <span class="number">#278</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$5.09</span>
   </div>
 </div>
 <div class="card rare">
@@ -4452,6 +4867,7 @@
     <span class="name">Gengar VMAX</span>
     <span class="number">#157</span>
     <span class="rarity is-rare">Rare Holo VMAX</span>
+    <span class="price price-rare">$49.01</span>
   </div>
 </div>
   </div>
@@ -4471,6 +4887,7 @@
     <span class="name">Charizard VSTAR</span>
     <span class="number">#174</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$80.41</span>
   </div>
 </div>
 <div class="card rare">
@@ -4479,6 +4896,7 @@
     <span class="name">Charizard V</span>
     <span class="number">#154</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$354.25</span>
   </div>
 </div>
 <div class="card rare">
@@ -4487,6 +4905,7 @@
     <span class="name">Arceus V</span>
     <span class="number">#166</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$62.65</span>
   </div>
 </div>
   </div>
@@ -4506,6 +4925,7 @@
     <span class="name">Single Strike Urshifu VMAX</span>
     <span class="number">#TG29</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$4.84</span>
   </div>
 </div>
 <div class="card rare">
@@ -4514,6 +4934,7 @@
     <span class="name">Flareon</span>
     <span class="number">#TG01</span>
     <span class="rarity is-rare">Trainer Gallery Rare Holo</span>
+    <span class="price price-rare">$23.90</span>
   </div>
 </div>
 <div class="card rare">
@@ -4522,6 +4943,7 @@
     <span class="name">Jolteon</span>
     <span class="number">#TG04</span>
     <span class="rarity is-rare">Trainer Gallery Rare Holo</span>
+    <span class="price price-rare">$20.04</span>
   </div>
 </div>
 <div class="card rare">
@@ -4530,6 +4952,7 @@
     <span class="name">Zekrom</span>
     <span class="number">#TG05</span>
     <span class="rarity is-rare">Trainer Gallery Rare Holo</span>
+    <span class="price price-rare">$15.82</span>
   </div>
 </div>
 <div class="card rare">
@@ -4538,6 +4961,7 @@
     <span class="name">Dedenne</span>
     <span class="number">#TG07</span>
     <span class="rarity is-rare">Trainer Gallery Rare Holo</span>
+    <span class="price price-rare">$8.82</span>
   </div>
 </div>
 <div class="card rare">
@@ -4546,6 +4970,7 @@
     <span class="name">Houndoom</span>
     <span class="number">#TG10</span>
     <span class="rarity is-rare">Trainer Gallery Rare Holo</span>
+    <span class="price price-rare">$4.25</span>
   </div>
 </div>
 <div class="card rare">
@@ -4554,6 +4979,7 @@
     <span class="name">Oranguru</span>
     <span class="number">#TG12</span>
     <span class="rarity is-rare">Trainer Gallery Rare Holo</span>
+    <span class="price price-rare">$3.21</span>
   </div>
 </div>
 <div class="card rare">
@@ -4562,6 +4988,7 @@
     <span class="name">Sylveon VMAX</span>
     <span class="number">#TG15</span>
     <span class="rarity is-rare">Rare Holo VMAX</span>
+    <span class="price price-rare">$77.03</span>
   </div>
 </div>
 <div class="card rare">
@@ -4570,6 +4997,7 @@
     <span class="name">Single Strike Urshifu VMAX</span>
     <span class="number">#TG19</span>
     <span class="rarity is-rare">Rare Holo VMAX</span>
+    <span class="price price-rare">$9.80</span>
   </div>
 </div>
 <div class="card rare">
@@ -4578,6 +5006,7 @@
     <span class="name">Umbreon VMAX</span>
     <span class="number">#TG23</span>
     <span class="rarity is-rare">Rare Holo VMAX</span>
+    <span class="price price-rare">$107.51</span>
   </div>
 </div>
 <div class="card rare">
@@ -4586,6 +5015,7 @@
     <span class="name">Mimikyu V</span>
     <span class="number">#TG16</span>
     <span class="rarity is-rare">Rare Holo V</span>
+    <span class="price price-rare">$90.99</span>
   </div>
 </div>
   </div>
@@ -4605,6 +5035,7 @@
     <span class="name">Machamp VMAX</span>
     <span class="number">#73</span>
     <span class="rarity is-rare">Rare Holo VMAX</span>
+    <span class="price price-rare">$6.20</span>
   </div>
 </div>
 <div class="card rare">
@@ -4613,6 +5044,7 @@
     <span class="name">Hisuian Typhlosion V</span>
     <span class="number">#53</span>
     <span class="rarity is-rare">Rare Holo V</span>
+    <span class="price price-rare">$1.55</span>
   </div>
 </div>
 <div class="card rare">
@@ -4621,6 +5053,7 @@
     <span class="name">Lucario V</span>
     <span class="number">#78</span>
     <span class="rarity is-rare">Rare Holo V</span>
+    <span class="price price-rare">$1.58</span>
   </div>
 </div>
 <div class="card rare">
@@ -4629,6 +5062,7 @@
     <span class="name">Beedrill V</span>
     <span class="number">#161</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$69.63</span>
   </div>
 </div>
 <div class="card rare">
@@ -4637,6 +5071,7 @@
     <span class="name">Origin Forme Dialga V</span>
     <span class="number">#177</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$68.36</span>
   </div>
 </div>
   </div>
@@ -4656,6 +5091,7 @@
     <span class="name">Kingdra</span>
     <span class="number">#TG03</span>
     <span class="rarity is-rare">Trainer Gallery Rare Holo</span>
+    <span class="price price-rare">$14.31</span>
   </div>
 </div>
 <div class="card rare">
@@ -4664,6 +5100,7 @@
     <span class="name">Hoothoot</span>
     <span class="number">#TG12</span>
     <span class="rarity is-rare">Trainer Gallery Rare Holo</span>
+    <span class="price price-rare">$8.52</span>
   </div>
 </div>
 <div class="card rare">
@@ -4672,6 +5109,7 @@
     <span class="name">Starmie V</span>
     <span class="number">#TG13</span>
     <span class="rarity is-rare">Rare Holo V</span>
+    <span class="price price-rare">$117.77</span>
   </div>
 </div>
 <div class="card rare">
@@ -4680,6 +5118,7 @@
     <span class="name">Shadow Rider Calyrex V</span>
     <span class="number">#TG17</span>
     <span class="rarity is-rare">Rare Holo V</span>
+    <span class="price price-rare">$10.62</span>
   </div>
 </div>
 <div class="card rare">
@@ -4688,6 +5127,7 @@
     <span class="name">Zacian V</span>
     <span class="number">#TG21</span>
     <span class="rarity is-rare">Rare Holo V</span>
+    <span class="price price-rare">$20.31</span>
   </div>
 </div>
 <div class="card rare">
@@ -4696,6 +5136,7 @@
     <span class="name">Garchomp V</span>
     <span class="number">#TG23</span>
     <span class="rarity is-rare">Rare Holo V</span>
+    <span class="price price-rare">$85.98</span>
   </div>
 </div>
   </div>
@@ -4715,6 +5156,7 @@
     <span class="name">Ditto</span>
     <span class="number">#53</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$5.72</span>
   </div>
 </div>
   </div>
@@ -4734,6 +5176,7 @@
     <span class="name">Radiant Steelix</span>
     <span class="number">#124</span>
     <span class="rarity is-rare">Radiant Rare</span>
+    <span class="price price-rare">$0.95</span>
   </div>
 </div>
 <div class="card rare">
@@ -4742,6 +5185,7 @@
     <span class="name">Rotom V</span>
     <span class="number">#177</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$30.58</span>
   </div>
 </div>
 <div class="card rare">
@@ -4750,6 +5194,7 @@
     <span class="name">Giratina V</span>
     <span class="number">#186</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$808.50</span>
   </div>
 </div>
   </div>
@@ -4769,6 +5214,7 @@
     <span class="name">Unown VSTAR</span>
     <span class="number">#199</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$9.69</span>
   </div>
 </div>
 <div class="card rare">
@@ -4777,6 +5223,7 @@
     <span class="name">Furisode Girl</span>
     <span class="number">#205</span>
     <span class="rarity is-rare">Rare Rainbow</span>
+    <span class="price price-rare">$6.59</span>
   </div>
 </div>
 <div class="card rare">
@@ -4785,6 +5232,7 @@
     <span class="name">Radiant Alakazam</span>
     <span class="number">#59</span>
     <span class="rarity is-rare">Radiant Rare</span>
+    <span class="price price-rare">$1.74</span>
   </div>
 </div>
 <div class="card rare">
@@ -4793,6 +5241,7 @@
     <span class="name">Lugia V</span>
     <span class="number">#138</span>
     <span class="rarity is-rare">Rare Holo V</span>
+    <span class="price price-rare">$15.26</span>
   </div>
 </div>
 <div class="card rare">
@@ -4801,6 +5250,7 @@
     <span class="name">Ho-Oh V</span>
     <span class="number">#140</span>
     <span class="rarity is-rare">Rare Holo V</span>
+    <span class="price price-rare">$3.31</span>
   </div>
 </div>
 <div class="card rare">
@@ -4809,6 +5259,7 @@
     <span class="name">Unown V</span>
     <span class="number">#177</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$30.45</span>
   </div>
 </div>
   </div>
@@ -4828,6 +5279,7 @@
     <span class="name">Rayquaza VMAX</span>
     <span class="number">#TG29</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$29.50</span>
   </div>
 </div>
 <div class="card rare">
@@ -4836,6 +5288,7 @@
     <span class="name">Rockruff</span>
     <span class="number">#TG07</span>
     <span class="rarity is-rare">Trainer Gallery Rare Holo</span>
+    <span class="price price-rare">$5.54</span>
   </div>
 </div>
 <div class="card rare">
@@ -4844,6 +5297,7 @@
     <span class="name">Smeargle</span>
     <span class="number">#TG10</span>
     <span class="rarity is-rare">Trainer Gallery Rare Holo</span>
+    <span class="price price-rare">$5.24</span>
   </div>
 </div>
 <div class="card rare">
@@ -4852,6 +5306,7 @@
     <span class="name">Rayquaza VMAX</span>
     <span class="number">#TG20</span>
     <span class="rarity is-rare">Rare Holo VMAX</span>
+    <span class="price price-rare">$206.70</span>
   </div>
 </div>
 <div class="card rare">
@@ -4860,6 +5315,7 @@
     <span class="name">Duraludon VMAX</span>
     <span class="number">#TG21</span>
     <span class="rarity is-rare">Rare Holo VMAX</span>
+    <span class="price price-rare">$12.16</span>
   </div>
 </div>
 <div class="card rare">
@@ -4868,6 +5324,7 @@
     <span class="name">Blaziken V</span>
     <span class="number">#TG14</span>
     <span class="rarity is-rare">Rare Holo V</span>
+    <span class="price price-rare">$33.07</span>
   </div>
 </div>
 <div class="card rare">
@@ -4876,6 +5333,7 @@
     <span class="name">Zeraora V</span>
     <span class="number">#TG16</span>
     <span class="rarity is-rare">Rare Holo V</span>
+    <span class="price price-rare">$11.96</span>
   </div>
 </div>
 <div class="card rare">
@@ -4884,6 +5342,7 @@
     <span class="name">Mawile V</span>
     <span class="number">#TG17</span>
     <span class="rarity is-rare">Rare Holo V</span>
+    <span class="price price-rare">$11.83</span>
   </div>
 </div>
 <div class="card rare">
@@ -4892,6 +5351,7 @@
     <span class="name">Professor Burnet</span>
     <span class="number">#TG26</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$4.25</span>
   </div>
 </div>
   </div>
@@ -4911,6 +5371,7 @@
     <span class="name">Miraidon</span>
     <span class="number">#13</span>
     <span class="rarity">Promo</span>
+    <span class="price">$9.25</span>
   </div>
 </div>
 <div class="card">
@@ -4919,6 +5380,7 @@
     <span class="name">Pikachu</span>
     <span class="number">#27</span>
     <span class="rarity">Promo</span>
+    <span class="price">$24.08</span>
   </div>
 </div>
 <div class="card">
@@ -4927,6 +5389,7 @@
     <span class="name">Cleffa</span>
     <span class="number">#37</span>
     <span class="rarity">Promo</span>
+    <span class="price">$8.45</span>
   </div>
 </div>
 <div class="card">
@@ -4935,6 +5398,7 @@
     <span class="name">Charmander</span>
     <span class="number">#44</span>
     <span class="rarity">Promo</span>
+    <span class="price">$70.90</span>
   </div>
 </div>
 <div class="card">
@@ -4943,6 +5407,7 @@
     <span class="name">Mew ex</span>
     <span class="number">#53</span>
     <span class="rarity">Promo</span>
+    <span class="price">$80.14</span>
   </div>
 </div>
 <div class="card">
@@ -4951,6 +5416,7 @@
     <span class="name">Scream Tail</span>
     <span class="number">#65</span>
     <span class="rarity">Promo</span>
+    <span class="price">$7.05</span>
   </div>
 </div>
 <div class="card">
@@ -4959,6 +5425,7 @@
     <span class="name">Iron Bundle</span>
     <span class="number">#66</span>
     <span class="rarity">Promo</span>
+    <span class="price">$2.58</span>
   </div>
 </div>
 <div class="card">
@@ -4967,6 +5434,7 @@
     <span class="name">Mimikyu</span>
     <span class="number">#75</span>
     <span class="rarity">Promo</span>
+    <span class="price">$15.95</span>
   </div>
 </div>
 <div class="card">
@@ -4975,6 +5443,7 @@
     <span class="name">Pikachu with Grey Felt Hat</span>
     <span class="number">#85</span>
     <span class="rarity">Promo</span>
+    <span class="price">$983.63</span>
   </div>
 </div>
 <div class="card">
@@ -4983,6 +5452,7 @@
     <span class="name">Pecharunt</span>
     <span class="number">#129</span>
     <span class="rarity">Promo</span>
+    <span class="price">$1.72</span>
   </div>
 </div>
 <div class="card">
@@ -4991,6 +5461,7 @@
     <span class="name">Kingdra ex</span>
     <span class="number">#131</span>
     <span class="rarity">Promo</span>
+    <span class="price">$97.08</span>
   </div>
 </div>
 <div class="card">
@@ -4999,6 +5470,7 @@
     <span class="name">Greninja ex</span>
     <span class="number">#132</span>
     <span class="rarity">Promo</span>
+    <span class="price">$120.03</span>
   </div>
 </div>
 <div class="card">
@@ -5007,6 +5479,7 @@
     <span class="name">Magneton</span>
     <span class="number">#159</span>
     <span class="rarity">Promo</span>
+    <span class="price">$9.81</span>
   </div>
 </div>
 <div class="card">
@@ -5015,6 +5488,7 @@
     <span class="name">Eevee</span>
     <span class="number">#173</span>
     <span class="rarity">Promo</span>
+    <span class="price">$15.20</span>
   </div>
 </div>
 <div class="card">
@@ -5023,6 +5497,7 @@
     <span class="name">Eevee ex</span>
     <span class="number">#174</span>
     <span class="rarity">Promo</span>
+    <span class="price">$29.48</span>
   </div>
 </div>
 <div class="card">
@@ -5031,6 +5506,7 @@
     <span class="name">Team Rocket's Wobbuffet</span>
     <span class="number">#203</span>
     <span class="rarity">Promo</span>
+    <span class="price">€7.32</span>
   </div>
 </div>
 <div class="card">
@@ -5039,6 +5515,7 @@
     <span class="name">Steven's Beldum</span>
     <span class="number">#207</span>
     <span class="rarity">Promo</span>
+    <span class="price">$35.00</span>
   </div>
 </div>
 <div class="card">
@@ -5047,6 +5524,7 @@
     <span class="name">Marnie's Morpeko</span>
     <span class="number">#206</span>
     <span class="rarity">Promo</span>
+    <span class="price">$50.04</span>
   </div>
 </div>
   </div>
@@ -5066,6 +5544,7 @@
     <span class="name">Pikachu</span>
     <span class="number">#160</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$57.09</span>
   </div>
 </div>
 <div class="card rare">
@@ -5074,6 +5553,7 @@
     <span class="name">Radiant Eternatus</span>
     <span class="number">#105</span>
     <span class="rarity is-rare">Radiant Rare</span>
+    <span class="price price-rare">$0.69</span>
   </div>
 </div>
 <div class="card rare">
@@ -5082,6 +5562,7 @@
     <span class="name">Zeraora VMAX</span>
     <span class="number">#54</span>
     <span class="rarity is-rare">Rare Holo VMAX</span>
+    <span class="price price-rare">$3.07</span>
   </div>
 </div>
 <div class="card rare">
@@ -5090,6 +5571,7 @@
     <span class="name">Zamazenta V</span>
     <span class="number">#98</span>
     <span class="rarity is-rare">Rare Holo V</span>
+    <span class="price price-rare">$1.02</span>
   </div>
 </div>
 <div class="card rare">
@@ -5098,6 +5580,7 @@
     <span class="name">Eevee V</span>
     <span class="number">#108</span>
     <span class="rarity is-rare">Rare Holo V</span>
+    <span class="price price-rare">$8.75</span>
   </div>
 </div>
 <div class="card rare">
@@ -5106,6 +5589,7 @@
     <span class="name">Elesa's Sparkle</span>
     <span class="number">#147</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$14.77</span>
   </div>
 </div>
 <div class="card rare">
@@ -5114,6 +5598,7 @@
     <span class="name">Ditto</span>
     <span class="number">#107</span>
     <span class="rarity is-rare">Rare Holo</span>
+    <span class="price price-rare">$3.46</span>
   </div>
 </div>
   </div>
@@ -5133,6 +5618,7 @@
     <span class="name">Irida</span>
     <span class="number">#GG63</span>
     <span class="rarity is-rare">Rare Ultra</span>
+    <span class="price price-rare">$7.61</span>
   </div>
 </div>
 <div class="card rare">
@@ -5141,6 +5627,7 @@
     <span class="name">Zamazenta V</span>
     <span class="number">#GG54</span>
     <span class="rarity is-rare">Rare Holo V</span>
+    <span class="price price-rare">$23.91</span>
   </div>
 </div>
 <div class="card rare">
@@ -5149,6 +5636,7 @@
     <span class="name">Lumineon V</span>
     <span class="number">#GG39</span>
     <span class="rarity is-rare">Rare Holo V</span>
+    <span class="price price-rare">$23.49</span>
   </div>
 </div>
 <div class="card rare">
@@ -5157,6 +5645,7 @@
     <span class="name">Deoxys VMAX</span>
     <span class="number">#GG45</span>
     <span class="rarity is-rare">Rare Holo VMAX</span>
+    <span class="price price-rare">$80.48</span>
   </div>
 </div>
 <div class="card rare">
@@ -5165,6 +5654,7 @@
     <span class="name">Hisuian Samurott VSTAR</span>
     <span class="number">#GG52</span>
     <span class="rarity is-rare">Rare Holo VSTAR</span>
+    <span class="price price-rare">$12.39</span>
   </div>
 </div>
 <div class="card rare">
@@ -5173,6 +5663,7 @@
     <span class="name">Deoxys VSTAR</span>
     <span class="number">#GG46</span>
     <span class="rarity is-rare">Rare Holo VSTAR</span>
+    <span class="price price-rare">$60.61</span>
   </div>
 </div>
 <div class="card rare">
@@ -5181,6 +5672,7 @@
     <span class="name">Mewtwo VSTAR</span>
     <span class="number">#GG44</span>
     <span class="rarity is-rare">Rare Holo VSTAR</span>
+    <span class="price price-rare">$284.70</span>
   </div>
 </div>
 <div class="card rare">
@@ -5189,6 +5681,7 @@
     <span class="name">Simisear VSTAR</span>
     <span class="number">#GG37</span>
     <span class="rarity is-rare">Rare Holo VSTAR</span>
+    <span class="price price-rare">$35.59</span>
   </div>
 </div>
 <div class="card rare">
@@ -5197,6 +5690,7 @@
     <span class="name">Diancie</span>
     <span class="number">#GG13</span>
     <span class="rarity is-rare">Trainer Gallery Rare Holo</span>
+    <span class="price price-rare">$4.52</span>
   </div>
 </div>
 <div class="card rare">
@@ -5205,6 +5699,7 @@
     <span class="name">Keldeo</span>
     <span class="number">#GG07</span>
     <span class="rarity is-rare">Trainer Gallery Rare Holo</span>
+    <span class="price price-rare">$19.46</span>
   </div>
 </div>
 <div class="card rare">
@@ -5213,6 +5708,7 @@
     <span class="name">Arceus VSTAR</span>
     <span class="number">#GG70</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$250.06</span>
   </div>
 </div>
 <div class="card rare">
@@ -5221,6 +5717,7 @@
     <span class="name">Origin Forme Dialga VSTAR</span>
     <span class="number">#GG68</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$137.17</span>
   </div>
 </div>
 <div class="card rare">
@@ -5229,6 +5726,7 @@
     <span class="name">Origin Forme Palkia VSTAR</span>
     <span class="number">#GG67</span>
     <span class="rarity is-rare">Rare Secret</span>
+    <span class="price price-rare">$131.49</span>
   </div>
 </div>
   </div>
@@ -5248,6 +5746,7 @@
     <span class="name">Koraidon ex</span>
     <span class="number">#247</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$24.25</span>
   </div>
 </div>
 <div class="card rare">
@@ -5256,6 +5755,7 @@
     <span class="name">Miriam</span>
     <span class="number">#251</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$28.73</span>
   </div>
 </div>
 <div class="card rare">
@@ -5264,6 +5764,7 @@
     <span class="name">Tarountula</span>
     <span class="number">#199</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$12.71</span>
   </div>
 </div>
 <div class="card rare">
@@ -5272,6 +5773,7 @@
     <span class="name">Clauncher</span>
     <span class="number">#205</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$7.67</span>
   </div>
 </div>
 <div class="card rare">
@@ -5280,6 +5782,7 @@
     <span class="name">Slowpoke</span>
     <span class="number">#204</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$47.79</span>
   </div>
 </div>
 <div class="card rare">
@@ -5288,6 +5791,7 @@
     <span class="name">Dondozo</span>
     <span class="number">#207</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$14.93</span>
   </div>
 </div>
 <div class="card rare">
@@ -5296,6 +5800,7 @@
     <span class="name">Pachirisu</span>
     <span class="number">#208</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$18.43</span>
   </div>
 </div>
 <div class="card rare">
@@ -5304,6 +5809,7 @@
     <span class="name">Drowzee</span>
     <span class="number">#210</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$70.18</span>
   </div>
 </div>
 <div class="card rare">
@@ -5312,6 +5818,7 @@
     <span class="name">Kingambit</span>
     <span class="number">#220</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$11.00</span>
   </div>
 </div>
   </div>
@@ -5331,6 +5838,7 @@
     <span class="name">Wo-Chien ex</span>
     <span class="number">#257</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$16.30</span>
   </div>
 </div>
 <div class="card rare">
@@ -5339,6 +5847,7 @@
     <span class="name">Chi-Yu ex</span>
     <span class="number">#259</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$52.76</span>
   </div>
 </div>
 <div class="card rare">
@@ -5347,6 +5856,7 @@
     <span class="name">Chien-Pao ex</span>
     <span class="number">#261</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$29.07</span>
   </div>
 </div>
 <div class="card rare">
@@ -5355,6 +5865,7 @@
     <span class="name">Tinkaton ex</span>
     <span class="number">#262</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$62.31</span>
   </div>
 </div>
 <div class="card rare">
@@ -5363,6 +5874,7 @@
     <span class="name">Grusha</span>
     <span class="number">#268</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$20.15</span>
   </div>
 </div>
 <div class="card rare">
@@ -5371,6 +5883,7 @@
     <span class="name">Iono</span>
     <span class="number">#269</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$66.95</span>
   </div>
 </div>
 <div class="card rare">
@@ -5379,6 +5892,7 @@
     <span class="name">Magikarp</span>
     <span class="number">#203</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$403.55</span>
   </div>
 </div>
 <div class="card rare">
@@ -5387,6 +5901,7 @@
     <span class="name">Marill</span>
     <span class="number">#204</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$61.82</span>
   </div>
 </div>
 <div class="card rare">
@@ -5395,6 +5910,7 @@
     <span class="name">Frigibax</span>
     <span class="number">#208</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$23.29</span>
   </div>
 </div>
 <div class="card rare">
@@ -5403,6 +5919,7 @@
     <span class="name">Arctibax</span>
     <span class="number">#209</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$18.65</span>
   </div>
 </div>
 <div class="card rare">
@@ -5411,6 +5928,7 @@
     <span class="name">Mismagius</span>
     <span class="number">#212</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$45.07</span>
   </div>
 </div>
 <div class="card rare">
@@ -5419,6 +5937,7 @@
     <span class="name">Sandygast</span>
     <span class="number">#214</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$10.36</span>
   </div>
 </div>
 <div class="card rare">
@@ -5427,6 +5946,7 @@
     <span class="name">Rabsca</span>
     <span class="number">#215</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$6.03</span>
   </div>
 </div>
 <div class="card rare">
@@ -5435,6 +5955,7 @@
     <span class="name">Tinkatink</span>
     <span class="number">#216</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$34.90</span>
   </div>
 </div>
 <div class="card rare">
@@ -5443,6 +5964,7 @@
     <span class="name">Tinkatuff</span>
     <span class="number">#217</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$38.63</span>
   </div>
 </div>
 <div class="card rare">
@@ -5451,6 +5973,7 @@
     <span class="name">Paldean Tauros</span>
     <span class="number">#218</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$17.66</span>
   </div>
 </div>
 <div class="card rare">
@@ -5459,6 +5982,7 @@
     <span class="name">Maushold</span>
     <span class="number">#226</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$107.81</span>
   </div>
 </div>
 <div class="card rare">
@@ -5467,6 +5991,7 @@
     <span class="name">Flamigo</span>
     <span class="number">#227</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$10.65</span>
   </div>
 </div>
   </div>
@@ -5486,6 +6011,7 @@
     <span class="name">Charizard ex</span>
     <span class="number">#223</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$141.86</span>
   </div>
 </div>
 <div class="card rare">
@@ -5494,6 +6020,7 @@
     <span class="name">Gloom</span>
     <span class="number">#198</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$28.10</span>
   </div>
 </div>
 <div class="card rare">
@@ -5502,6 +6029,7 @@
     <span class="name">Ninetales</span>
     <span class="number">#199</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$50.87</span>
   </div>
 </div>
 <div class="card rare">
@@ -5510,6 +6038,7 @@
     <span class="name">Palafin</span>
     <span class="number">#200</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$4.80</span>
   </div>
 </div>
 <div class="card rare">
@@ -5518,6 +6047,7 @@
     <span class="name">Cleffa</span>
     <span class="number">#202</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$43.37</span>
   </div>
 </div>
 <div class="card rare">
@@ -5526,6 +6056,7 @@
     <span class="name">Scizor</span>
     <span class="number">#205</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$18.78</span>
   </div>
 </div>
 <div class="card rare">
@@ -5534,6 +6065,7 @@
     <span class="name">Varoom</span>
     <span class="number">#206</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$2.84</span>
   </div>
 </div>
 <div class="card rare">
@@ -5542,6 +6074,7 @@
     <span class="name">Pidgey</span>
     <span class="number">#207</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$22.12</span>
   </div>
 </div>
 <div class="card rare">
@@ -5550,6 +6083,7 @@
     <span class="name">Lechonk</span>
     <span class="number">#209</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$15.15</span>
   </div>
 </div>
 <div class="card rare">
@@ -5558,6 +6092,7 @@
     <span class="name">Absol ex</span>
     <span class="number">#135</span>
     <span class="rarity is-rare">Double Rare</span>
+    <span class="price price-rare">$1.31</span>
   </div>
 </div>
   </div>
@@ -5577,6 +6112,7 @@
     <span class="name">Venusaur ex</span>
     <span class="number">#198</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$132.47</span>
   </div>
 </div>
 <div class="card rare">
@@ -5585,6 +6121,7 @@
     <span class="name">Charizard ex</span>
     <span class="number">#199</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$474.90</span>
   </div>
 </div>
 <div class="card rare">
@@ -5593,6 +6130,7 @@
     <span class="name">Blastoise ex</span>
     <span class="number">#200</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$160.40</span>
   </div>
 </div>
 <div class="card rare">
@@ -5601,6 +6139,7 @@
     <span class="name">Zapdos ex</span>
     <span class="number">#202</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$117.41</span>
   </div>
 </div>
 <div class="card rare">
@@ -5609,6 +6148,7 @@
     <span class="name">Giovanni's Charisma</span>
     <span class="number">#204</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$17.53</span>
   </div>
 </div>
 <div class="card rare">
@@ -5617,6 +6157,7 @@
     <span class="name">Bulbasaur</span>
     <span class="number">#166</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$89.13</span>
   </div>
 </div>
 <div class="card rare">
@@ -5625,6 +6166,7 @@
     <span class="name">Ivysaur</span>
     <span class="number">#167</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$56.73</span>
   </div>
 </div>
 <div class="card rare">
@@ -5633,6 +6175,7 @@
     <span class="name">Squirtle</span>
     <span class="number">#170</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$114.78</span>
   </div>
 </div>
 <div class="card rare">
@@ -5641,6 +6184,7 @@
     <span class="name">Wartortle</span>
     <span class="number">#171</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$70.69</span>
   </div>
 </div>
 <div class="card rare">
@@ -5649,6 +6193,7 @@
     <span class="name">Caterpie</span>
     <span class="number">#172</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$21.09</span>
   </div>
 </div>
 <div class="card rare">
@@ -5657,6 +6202,7 @@
     <span class="name">Psyduck</span>
     <span class="number">#175</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$75.98</span>
   </div>
 </div>
 <div class="card rare">
@@ -5665,6 +6211,7 @@
     <span class="name">Poliwhirl</span>
     <span class="number">#176</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$59.44</span>
   </div>
 </div>
 <div class="card rare">
@@ -5673,6 +6220,7 @@
     <span class="name">Omanyte</span>
     <span class="number">#180</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$17.46</span>
   </div>
 </div>
 <div class="card rare">
@@ -5681,6 +6229,7 @@
     <span class="name">Dragonair</span>
     <span class="number">#181</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$50.57</span>
   </div>
 </div>
 <div class="card rare">
@@ -5689,6 +6238,7 @@
     <span class="name">Giovanni's Charisma</span>
     <span class="number">#197</span>
     <span class="rarity is-rare">Ultra Rare</span>
+    <span class="price price-rare">$5.10</span>
   </div>
 </div>
   </div>
@@ -5708,6 +6258,7 @@
     <span class="name">Garchomp ex</span>
     <span class="number">#260</span>
     <span class="rarity is-rare">Hyper Rare</span>
+    <span class="price price-rare">$16.21</span>
   </div>
 </div>
 <div class="card rare">
@@ -5716,6 +6267,7 @@
     <span class="name">Garchomp ex</span>
     <span class="number">#245</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$39.48</span>
   </div>
 </div>
 <div class="card rare">
@@ -5724,6 +6276,7 @@
     <span class="name">Golisopod ex</span>
     <span class="number">#246</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$27.59</span>
   </div>
 </div>
 <div class="card rare">
@@ -5732,6 +6285,7 @@
     <span class="name">Roaring Moon ex</span>
     <span class="number">#251</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$41.99</span>
   </div>
 </div>
 <div class="card rare">
@@ -5740,6 +6294,7 @@
     <span class="name">Gholdengo ex</span>
     <span class="number">#252</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$37.50</span>
   </div>
 </div>
 <div class="card rare">
@@ -5748,6 +6303,7 @@
     <span class="name">Altaria ex</span>
     <span class="number">#253</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$60.81</span>
   </div>
 </div>
 <div class="card rare">
@@ -5756,6 +6312,7 @@
     <span class="name">Dottler</span>
     <span class="number">#184</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$5.16</span>
   </div>
 </div>
 <div class="card rare">
@@ -5764,6 +6321,7 @@
     <span class="name">Magby</span>
     <span class="number">#186</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$20.14</span>
   </div>
 </div>
 <div class="card rare">
@@ -5772,6 +6330,7 @@
     <span class="name">Snorunt</span>
     <span class="number">#188</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$10.17</span>
   </div>
 </div>
 <div class="card rare">
@@ -5780,6 +6339,7 @@
     <span class="name">Mantyke</span>
     <span class="number">#189</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$35.41</span>
   </div>
 </div>
 <div class="card rare">
@@ -5788,6 +6348,7 @@
     <span class="name">Vanillish</span>
     <span class="number">#190</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$11.96</span>
   </div>
 </div>
 <div class="card rare">
@@ -5796,6 +6357,7 @@
     <span class="name">Veluza</span>
     <span class="number">#192</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$10.30</span>
   </div>
 </div>
 <div class="card rare">
@@ -5804,6 +6366,7 @@
     <span class="name">Espathra</span>
     <span class="number">#197</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$7.24</span>
   </div>
 </div>
 <div class="card rare">
@@ -5812,6 +6375,7 @@
     <span class="name">Joltik</span>
     <span class="number">#196</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$29.02</span>
   </div>
 </div>
 <div class="card rare">
@@ -5820,6 +6384,7 @@
     <span class="name">Minior</span>
     <span class="number">#201</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$26.84</span>
   </div>
 </div>
 <div class="card rare">
@@ -5828,6 +6393,7 @@
     <span class="name">Garbodor</span>
     <span class="number">#204</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$16.56</span>
   </div>
 </div>
 <div class="card rare">
@@ -5836,6 +6402,7 @@
     <span class="name">Yveltal</span>
     <span class="number">#205</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$30.87</span>
   </div>
 </div>
 <div class="card rare">
@@ -5844,6 +6411,7 @@
     <span class="name">Morpeko</span>
     <span class="number">#206</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$41.79</span>
   </div>
 </div>
 <div class="card rare">
@@ -5852,6 +6420,7 @@
     <span class="name">Brute Bonnet</span>
     <span class="number">#207</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$16.15</span>
   </div>
 </div>
 <div class="card rare">
@@ -5860,6 +6429,7 @@
     <span class="name">Loudred</span>
     <span class="number">#212</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$15.39</span>
   </div>
 </div>
   </div>
@@ -5879,6 +6449,7 @@
     <span class="name">Mew ex</span>
     <span class="number">#232</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$926.80</span>
   </div>
 </div>
 <div class="card rare">
@@ -5887,6 +6458,7 @@
     <span class="name">Gardevoir ex</span>
     <span class="number">#233</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$183.61</span>
   </div>
 </div>
 <div class="card rare">
@@ -5895,6 +6467,7 @@
     <span class="name">Charizard ex</span>
     <span class="number">#234</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$334.85</span>
   </div>
 </div>
 <div class="card rare">
@@ -5903,6 +6476,7 @@
     <span class="name">Wugtrio</span>
     <span class="number">#224</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$2.83</span>
   </div>
 </div>
   </div>
@@ -5922,6 +6496,7 @@
     <span class="name">Iron Leaves ex</span>
     <span class="number">#203</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$43.82</span>
   </div>
 </div>
 <div class="card rare">
@@ -5930,6 +6505,7 @@
     <span class="name">Iron Crown ex</span>
     <span class="number">#206</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$56.24</span>
   </div>
 </div>
 <div class="card rare">
@@ -5938,6 +6514,7 @@
     <span class="name">Raging Bolt ex</span>
     <span class="number">#208</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$71.16</span>
   </div>
 </div>
 <div class="card rare">
@@ -5946,6 +6523,7 @@
     <span class="name">Eri</span>
     <span class="number">#210</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$15.72</span>
   </div>
 </div>
 <div class="card rare">
@@ -5954,6 +6532,7 @@
     <span class="name">Morty's Conviction</span>
     <span class="number">#211</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$79.11</span>
   </div>
 </div>
 <div class="card rare">
@@ -5962,6 +6541,7 @@
     <span class="name">Deerling</span>
     <span class="number">#165</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$45.17</span>
   </div>
 </div>
 <div class="card rare">
@@ -5970,6 +6550,7 @@
     <span class="name">Litten</span>
     <span class="number">#167</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$38.61</span>
   </div>
 </div>
 <div class="card rare">
@@ -5978,6 +6559,7 @@
     <span class="name">Bronzor</span>
     <span class="number">#170</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$7.85</span>
   </div>
 </div>
 <div class="card rare">
@@ -5986,6 +6568,7 @@
     <span class="name">Reuniclus</span>
     <span class="number">#171</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$16.84</span>
   </div>
 </div>
 <div class="card rare">
@@ -5994,6 +6577,7 @@
     <span class="name">Cutiefly</span>
     <span class="number">#172</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$8.35</span>
   </div>
 </div>
 <div class="card rare">
@@ -6002,6 +6586,7 @@
     <span class="name">Arbok</span>
     <span class="number">#176</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$30.97</span>
   </div>
 </div>
 <div class="card rare">
@@ -6010,6 +6595,7 @@
     <span class="name">Gastly</span>
     <span class="number">#177</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$109.36</span>
   </div>
 </div>
 <div class="card rare">
@@ -6018,6 +6604,7 @@
     <span class="name">Meltan</span>
     <span class="number">#179</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$6.14</span>
   </div>
 </div>
 <div class="card rare">
@@ -6026,6 +6613,7 @@
     <span class="name">Lickitung</span>
     <span class="number">#180</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$29.10</span>
   </div>
 </div>
 <div class="card rare">
@@ -6034,6 +6622,7 @@
     <span class="name">Drampa</span>
     <span class="number">#184</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$34.59</span>
   </div>
 </div>
 <div class="card rare">
@@ -6042,6 +6631,7 @@
     <span class="name">Raging Bolt ex</span>
     <span class="number">#196</span>
     <span class="rarity is-rare">Ultra Rare</span>
+    <span class="price price-rare">$4.27</span>
   </div>
 </div>
 <div class="card rare">
@@ -6050,6 +6640,7 @@
     <span class="name">Gengar ex</span>
     <span class="number">#104</span>
     <span class="rarity is-rare">Double Rare</span>
+    <span class="price price-rare">$6.36</span>
   </div>
 </div>
 <div class="card rare">
@@ -6058,6 +6649,7 @@
     <span class="name">Flutter Mane</span>
     <span class="number">#78</span>
     <span class="rarity is-rare">Rare</span>
+    <span class="price price-rare">$0.14</span>
   </div>
 </div>
   </div>
@@ -6077,6 +6669,7 @@
     <span class="name">Greninja ex</span>
     <span class="number">#214</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$383.32</span>
   </div>
 </div>
 <div class="card rare">
@@ -6085,6 +6678,7 @@
     <span class="name">Infernape</span>
     <span class="number">#173</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$14.99</span>
   </div>
 </div>
 <div class="card rare">
@@ -6093,6 +6687,7 @@
     <span class="name">Enamorus</span>
     <span class="number">#180</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$6.31</span>
   </div>
 </div>
 <div class="card rare">
@@ -6101,6 +6696,7 @@
     <span class="name">Hisuian Growlithe</span>
     <span class="number">#181</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$34.56</span>
   </div>
 </div>
 <div class="card rare">
@@ -6109,6 +6705,7 @@
     <span class="name">Applin</span>
     <span class="number">#185</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$11.97</span>
   </div>
 </div>
 <div class="card rare">
@@ -6117,6 +6714,7 @@
     <span class="name">Tatsugiri</span>
     <span class="number">#186</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$22.55</span>
   </div>
 </div>
 <div class="card rare">
@@ -6125,6 +6723,7 @@
     <span class="name">Eevee</span>
     <span class="number">#188</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$92.08</span>
   </div>
 </div>
 <div class="card rare">
@@ -6133,6 +6732,7 @@
     <span class="name">Scream Tail ex</span>
     <span class="number">#197</span>
     <span class="rarity is-rare">Ultra Rare</span>
+    <span class="price price-rare">$2.90</span>
   </div>
 </div>
   </div>
@@ -6152,6 +6752,7 @@
     <span class="name">Horsea</span>
     <span class="number">#67</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$52.73</span>
   </div>
 </div>
 <div class="card rare">
@@ -6160,6 +6761,7 @@
     <span class="name">Munkidori</span>
     <span class="number">#72</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$42.61</span>
   </div>
 </div>
 <div class="card rare">
@@ -6168,6 +6770,7 @@
     <span class="name">Fezandipiti</span>
     <span class="number">#73</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$11.01</span>
   </div>
 </div>
 <div class="card rare">
@@ -6176,6 +6779,7 @@
     <span class="name">Zorua</span>
     <span class="number">#75</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$22.59</span>
   </div>
 </div>
 <div class="card rare">
@@ -6184,6 +6788,7 @@
     <span class="name">Cufant</span>
     <span class="number">#76</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$15.59</span>
   </div>
 </div>
 <div class="card rare">
@@ -6192,6 +6797,7 @@
     <span class="name">Persian</span>
     <span class="number">#78</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$79.62</span>
   </div>
 </div>
 <div class="card rare">
@@ -6200,6 +6806,7 @@
     <span class="name">Bewear</span>
     <span class="number">#79</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$35.60</span>
   </div>
 </div>
   </div>
@@ -6219,6 +6826,7 @@
     <span class="name">Hydrapple ex</span>
     <span class="number">#167</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$40.00</span>
   </div>
 </div>
 <div class="card rare">
@@ -6227,6 +6835,7 @@
     <span class="name">Galvantula ex</span>
     <span class="number">#168</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$19.66</span>
   </div>
 </div>
 <div class="card rare">
@@ -6235,6 +6844,7 @@
     <span class="name">Terapagos ex</span>
     <span class="number">#170</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$63.68</span>
   </div>
 </div>
 <div class="card rare">
@@ -6243,6 +6853,7 @@
     <span class="name">Ledian</span>
     <span class="number">#144</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$6.51</span>
   </div>
 </div>
 <div class="card rare">
@@ -6251,6 +6862,7 @@
     <span class="name">Raboot</span>
     <span class="number">#147</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$8.52</span>
   </div>
 </div>
 <div class="card rare">
@@ -6259,6 +6871,7 @@
     <span class="name">Squirtle</span>
     <span class="number">#148</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$135.84</span>
   </div>
 </div>
 <div class="card rare">
@@ -6267,6 +6880,7 @@
     <span class="name">Joltik</span>
     <span class="number">#150</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$7.82</span>
   </div>
 </div>
 <div class="card rare">
@@ -6275,6 +6889,7 @@
     <span class="name">Zeraora</span>
     <span class="number">#151</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$13.13</span>
   </div>
 </div>
 <div class="card rare">
@@ -6283,6 +6898,7 @@
     <span class="name">Milcery</span>
     <span class="number">#152</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$18.95</span>
   </div>
 </div>
 <div class="card rare">
@@ -6291,6 +6907,7 @@
     <span class="name">Galvantula ex</span>
     <span class="number">#51</span>
     <span class="rarity is-rare">Double Rare</span>
+    <span class="price price-rare">$0.91</span>
   </div>
 </div>
   </div>
@@ -6310,6 +6927,7 @@
     <span class="name">Pikachu ex</span>
     <span class="number">#247</span>
     <span class="rarity is-rare">Hyper Rare</span>
+    <span class="price price-rare">$91.07</span>
   </div>
 </div>
 <div class="card rare">
@@ -6318,6 +6936,7 @@
     <span class="name">Pikachu ex</span>
     <span class="number">#238</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$339.63</span>
   </div>
 </div>
 <div class="card rare">
@@ -6326,6 +6945,7 @@
     <span class="name">Milotic ex</span>
     <span class="number">#237</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$137.58</span>
   </div>
 </div>
 <div class="card rare">
@@ -6334,6 +6954,7 @@
     <span class="name">Hydreigon ex</span>
     <span class="number">#240</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$43.14</span>
   </div>
 </div>
 <div class="card rare">
@@ -6342,6 +6963,7 @@
     <span class="name">Exeggcute</span>
     <span class="number">#192</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$7.68</span>
   </div>
 </div>
 <div class="card rare">
@@ -6350,6 +6972,7 @@
     <span class="name">Shiinotic</span>
     <span class="number">#194</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$3.70</span>
   </div>
 </div>
 <div class="card rare">
@@ -6358,6 +6981,7 @@
     <span class="name">Castform Sunny Form</span>
     <span class="number">#195</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$9.16</span>
   </div>
 </div>
 <div class="card rare">
@@ -6366,6 +6990,7 @@
     <span class="name">Ceruledge</span>
     <span class="number">#197</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$26.34</span>
   </div>
 </div>
 <div class="card rare">
@@ -6374,6 +6999,7 @@
     <span class="name">Feebas</span>
     <span class="number">#198</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$9.06</span>
   </div>
 </div>
 <div class="card rare">
@@ -6382,6 +7008,7 @@
     <span class="name">Spheal</span>
     <span class="number">#199</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$10.85</span>
   </div>
 </div>
 <div class="card rare">
@@ -6390,6 +7017,7 @@
     <span class="name">Stunfisk</span>
     <span class="number">#202</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$2.44</span>
   </div>
 </div>
 <div class="card rare">
@@ -6398,6 +7026,7 @@
     <span class="name">Latios</span>
     <span class="number">#203</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$40.78</span>
   </div>
 </div>
 <div class="card rare">
@@ -6406,6 +7035,7 @@
     <span class="name">Mesprit</span>
     <span class="number">#204</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$12.19</span>
   </div>
 </div>
 <div class="card rare">
@@ -6414,6 +7044,7 @@
     <span class="name">Phanpy</span>
     <span class="number">#205</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$8.66</span>
   </div>
 </div>
 <div class="card rare">
@@ -6422,6 +7053,7 @@
     <span class="name">Flapple</span>
     <span class="number">#210</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$4.64</span>
   </div>
 </div>
 <div class="card rare">
@@ -6430,6 +7062,7 @@
     <span class="name">Slakoth</span>
     <span class="number">#212</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$13.95</span>
   </div>
 </div>
 <div class="card rare">
@@ -6438,6 +7071,7 @@
     <span class="name">Kecleon</span>
     <span class="number">#213</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$7.51</span>
   </div>
 </div>
 <div class="card rare">
@@ -6446,6 +7080,7 @@
     <span class="name">Braviary</span>
     <span class="number">#214</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$5.90</span>
   </div>
 </div>
 <div class="card rare">
@@ -6454,6 +7089,7 @@
     <span class="name">Hydreigon ex</span>
     <span class="number">#223</span>
     <span class="rarity is-rare">Ultra Rare</span>
+    <span class="price price-rare">$4.90</span>
   </div>
 </div>
 <div class="card rare">
@@ -6462,6 +7098,7 @@
     <span class="name">Lisia's Appeal</span>
     <span class="number">#234</span>
     <span class="rarity is-rare">Ultra Rare</span>
+    <span class="price price-rare">$4.14</span>
   </div>
 </div>
 <div class="card rare">
@@ -6470,6 +7107,7 @@
     <span class="name">Sylveon ex</span>
     <span class="number">#86</span>
     <span class="rarity is-rare">Double Rare</span>
+    <span class="price price-rare">$2.22</span>
   </div>
 </div>
   </div>
@@ -6489,6 +7127,7 @@
     <span class="name">Leafeon ex</span>
     <span class="number">#144</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$332.99</span>
   </div>
 </div>
 <div class="card rare">
@@ -6497,6 +7136,7 @@
     <span class="name">Flareon ex</span>
     <span class="number">#146</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$203.80</span>
   </div>
 </div>
 <div class="card rare">
@@ -6505,6 +7145,7 @@
     <span class="name">Glaceon ex</span>
     <span class="number">#150</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$295.86</span>
   </div>
 </div>
 <div class="card rare">
@@ -6513,6 +7154,7 @@
     <span class="name">Jolteon ex</span>
     <span class="number">#153</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$196.68</span>
   </div>
 </div>
 <div class="card rare">
@@ -6521,6 +7163,7 @@
     <span class="name">Sylveon ex</span>
     <span class="number">#156</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$490.27</span>
   </div>
 </div>
 <div class="card rare">
@@ -6529,6 +7172,7 @@
     <span class="name">Iron Crown ex</span>
     <span class="number">#158</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$36.83</span>
   </div>
 </div>
 <div class="card rare">
@@ -6537,6 +7181,7 @@
     <span class="name">Umbreon ex</span>
     <span class="number">#161</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$1564.85</span>
   </div>
 </div>
   </div>
@@ -6556,6 +7201,7 @@
     <span class="name">Lillie's Clefairy ex</span>
     <span class="number">#184</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$133.64</span>
   </div>
 </div>
 <div class="card rare">
@@ -6564,6 +7210,7 @@
     <span class="name">Hop's Zacian ex</span>
     <span class="number">#186</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$38.28</span>
   </div>
 </div>
 <div class="card rare">
@@ -6572,6 +7219,7 @@
     <span class="name">Salamence ex</span>
     <span class="number">#187</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$70.37</span>
   </div>
 </div>
 <div class="card rare">
@@ -6580,6 +7228,7 @@
     <span class="name">Articuno</span>
     <span class="number">#161</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$27.35</span>
   </div>
 </div>
 <div class="card rare">
@@ -6588,6 +7237,7 @@
     <span class="name">Wailord</span>
     <span class="number">#162</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$17.90</span>
   </div>
 </div>
 <div class="card rare">
@@ -6596,6 +7246,7 @@
     <span class="name">N's Reshiram</span>
     <span class="number">#167</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$20.69</span>
   </div>
 </div>
 <div class="card rare">
@@ -6604,6 +7255,7 @@
     <span class="name">Noibat</span>
     <span class="number">#169</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$5.68</span>
   </div>
 </div>
   </div>
@@ -6623,6 +7275,7 @@
     <span class="name">Team Rocket's Moltres ex</span>
     <span class="number">#229</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$125.76</span>
   </div>
 </div>
 <div class="card rare">
@@ -6631,6 +7284,7 @@
     <span class="name">Ethan's Ho-Oh ex</span>
     <span class="number">#230</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$187.84</span>
   </div>
 </div>
 <div class="card rare">
@@ -6639,6 +7293,7 @@
     <span class="name">Ethan's Typhlosion</span>
     <span class="number">#190</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$34.29</span>
   </div>
 </div>
 <div class="card rare">
@@ -6647,6 +7302,7 @@
     <span class="name">Misty's Psyduck</span>
     <span class="number">#193</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$80.64</span>
   </div>
 </div>
 <div class="card rare">
@@ -6655,6 +7311,7 @@
     <span class="name">Clamperl</span>
     <span class="number">#195</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$5.30</span>
   </div>
 </div>
 <div class="card rare">
@@ -6663,6 +7320,7 @@
     <span class="name">Zamazenta</span>
     <span class="number">#201</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$5.21</span>
   </div>
 </div>
   </div>
@@ -6682,6 +7340,7 @@
     <span class="name">Zekrom ex</span>
     <span class="number">#172</span>
     <span class="rarity">Black White Rare</span>
+    <span class="price">$520.59</span>
   </div>
 </div>
 <div class="card rare">
@@ -6690,6 +7349,7 @@
     <span class="name">Kyurem ex</span>
     <span class="number">#165</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$79.25</span>
   </div>
 </div>
 <div class="card rare">
@@ -6698,6 +7358,7 @@
     <span class="name">Zekrom ex</span>
     <span class="number">#166</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$261.15</span>
   </div>
 </div>
 <div class="card rare">
@@ -6706,6 +7367,7 @@
     <span class="name">N's Plan</span>
     <span class="number">#170</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$69.97</span>
   </div>
 </div>
 <div class="card rare">
@@ -6714,6 +7376,7 @@
     <span class="name">Pansage</span>
     <span class="number">#89</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$32.18</span>
   </div>
 </div>
 <div class="card rare">
@@ -6722,6 +7385,7 @@
     <span class="name">Karrablast</span>
     <span class="number">#94</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$22.30</span>
   </div>
 </div>
 <div class="card rare">
@@ -6730,6 +7394,7 @@
     <span class="name">Foongus</span>
     <span class="number">#95</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$18.83</span>
   </div>
 </div>
 <div class="card rare">
@@ -6738,6 +7403,7 @@
     <span class="name">Amoonguss</span>
     <span class="number">#96</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$39.83</span>
   </div>
 </div>
 <div class="card rare">
@@ -6746,6 +7412,7 @@
     <span class="name">Tympole</span>
     <span class="number">#103</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$10.73</span>
   </div>
 </div>
 <div class="card rare">
@@ -6754,6 +7421,7 @@
     <span class="name">Seismitoad</span>
     <span class="number">#105</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$222.63</span>
   </div>
 </div>
 <div class="card rare">
@@ -6762,6 +7430,7 @@
     <span class="name">Tirtouga</span>
     <span class="number">#106</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$32.44</span>
   </div>
 </div>
 <div class="card rare">
@@ -6770,6 +7439,7 @@
     <span class="name">Cryogonal</span>
     <span class="number">#111</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$7.35</span>
   </div>
 </div>
 <div class="card rare">
@@ -6778,6 +7448,7 @@
     <span class="name">Munna</span>
     <span class="number">#116</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$19.64</span>
   </div>
 </div>
 <div class="card rare">
@@ -6786,6 +7457,7 @@
     <span class="name">Duosion</span>
     <span class="number">#119</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$12.89</span>
   </div>
 </div>
 <div class="card rare">
@@ -6794,6 +7466,7 @@
     <span class="name">Conkeldurr</span>
     <span class="number">#127</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$31.67</span>
   </div>
 </div>
 <div class="card rare">
@@ -6802,6 +7475,7 @@
     <span class="name">Cobalion</span>
     <span class="number">#144</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$29.84</span>
   </div>
 </div>
 <div class="card rare">
@@ -6810,6 +7484,7 @@
     <span class="name">Pidove</span>
     <span class="number">#148</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$29.82</span>
   </div>
 </div>
 <div class="card rare">
@@ -6818,6 +7493,7 @@
     <span class="name">Genesect ex</span>
     <span class="number">#161</span>
     <span class="rarity is-rare">Ultra Rare</span>
+    <span class="price price-rare">$1.66</span>
   </div>
 </div>
 <div class="card rare">
@@ -6826,6 +7502,7 @@
     <span class="name">Victini</span>
     <span class="number">#171</span>
     <span class="rarity is-rare">Rare</span>
+    <span class="price price-rare">$570.49</span>
   </div>
 </div>
   </div>
@@ -6845,6 +7522,7 @@
     <span class="name">Reshiram ex</span>
     <span class="number">#173</span>
     <span class="rarity">Black White Rare</span>
+    <span class="price">$462.92</span>
   </div>
 </div>
 <div class="card rare">
@@ -6853,6 +7531,7 @@
     <span class="name">Reshiram ex</span>
     <span class="number">#166</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$209.44</span>
   </div>
 </div>
 <div class="card rare">
@@ -6861,6 +7540,7 @@
     <span class="name">Keldeo ex</span>
     <span class="number">#167</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$71.78</span>
   </div>
 </div>
 <div class="card rare">
@@ -6869,6 +7549,7 @@
     <span class="name">Hilda</span>
     <span class="number">#171</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$65.40</span>
   </div>
 </div>
 <div class="card rare">
@@ -6877,6 +7558,7 @@
     <span class="name">Sewaddle</span>
     <span class="number">#87</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$18.00</span>
   </div>
 </div>
 <div class="card rare">
@@ -6885,6 +7567,7 @@
     <span class="name">Tepig</span>
     <span class="number">#96</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$34.17</span>
   </div>
 </div>
 <div class="card rare">
@@ -6893,6 +7576,7 @@
     <span class="name">Oshawott</span>
     <span class="number">#105</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$95.16</span>
   </div>
 </div>
 <div class="card rare">
@@ -6901,6 +7585,7 @@
     <span class="name">Basculin</span>
     <span class="number">#108</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$7.07</span>
   </div>
 </div>
 <div class="card rare">
@@ -6909,6 +7594,7 @@
     <span class="name">Vanillite</span>
     <span class="number">#111</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$14.89</span>
   </div>
 </div>
 <div class="card rare">
@@ -6917,6 +7603,7 @@
     <span class="name">Galvantula</span>
     <span class="number">#117</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$18.74</span>
   </div>
 </div>
 <div class="card rare">
@@ -6925,6 +7612,7 @@
     <span class="name">Woobat</span>
     <span class="number">#119</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$12.25</span>
   </div>
 </div>
 <div class="card rare">
@@ -6933,6 +7621,7 @@
     <span class="name">Swoobat</span>
     <span class="number">#120</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$11.21</span>
   </div>
 </div>
 <div class="card rare">
@@ -6941,6 +7630,7 @@
     <span class="name">Roggenrola</span>
     <span class="number">#127</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$11.40</span>
   </div>
 </div>
 <div class="card rare">
@@ -6949,6 +7639,7 @@
     <span class="name">Zorua</span>
     <span class="number">#142</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$41.20</span>
   </div>
 </div>
 <div class="card rare">
@@ -6957,6 +7648,7 @@
     <span class="name">Durant</span>
     <span class="number">#150</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$7.50</span>
   </div>
 </div>
   </div>
@@ -6976,6 +7668,7 @@
     <span class="name">Mega Lucario ex</span>
     <span class="number">#188</span>
     <span class="rarity is-rare">Mega Hyper Rare</span>
+    <span class="price price-rare">$257.13</span>
   </div>
 </div>
 <div class="card rare">
@@ -6984,6 +7677,7 @@
     <span class="name">Mega Venusaur ex</span>
     <span class="number">#177</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$178.07</span>
   </div>
 </div>
 <div class="card rare">
@@ -6992,6 +7686,7 @@
     <span class="name">Mega Gardevoir ex</span>
     <span class="number">#178</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$195.69</span>
   </div>
 </div>
 <div class="card rare">
@@ -7000,6 +7695,7 @@
     <span class="name">Mega Lucario ex</span>
     <span class="number">#179</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$238.93</span>
   </div>
 </div>
 <div class="card rare">
@@ -7008,6 +7704,7 @@
     <span class="name">Mega Latias ex</span>
     <span class="number">#181</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$92.61</span>
   </div>
 </div>
 <div class="card rare">
@@ -7016,6 +7713,7 @@
     <span class="name">Mega Kangaskhan ex</span>
     <span class="number">#182</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$68.80</span>
   </div>
 </div>
 <div class="card rare">
@@ -7024,6 +7722,7 @@
     <span class="name">Lillie's Determination</span>
     <span class="number">#184</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$75.13</span>
   </div>
 </div>
 <div class="card rare">
@@ -7032,6 +7731,7 @@
     <span class="name">Bulbasaur</span>
     <span class="number">#133</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$25.10</span>
   </div>
 </div>
 <div class="card rare">
@@ -7040,6 +7740,7 @@
     <span class="name">Ivysaur</span>
     <span class="number">#134</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$22.55</span>
   </div>
 </div>
 <div class="card rare">
@@ -7048,6 +7749,7 @@
     <span class="name">Steelix</span>
     <span class="number">#150</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$8.26</span>
   </div>
 </div>
   </div>
@@ -7067,6 +7769,7 @@
     <span class="name">Mega Charizard X ex</span>
     <span class="number">#125</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$901.57</span>
   </div>
 </div>
 <div class="card rare">
@@ -7075,6 +7778,7 @@
     <span class="name">Mega Sharpedo ex</span>
     <span class="number">#127</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    <span class="price price-rare">$24.76</span>
   </div>
 </div>
 <div class="card rare">
@@ -7083,6 +7787,7 @@
     <span class="name">Ludicolo</span>
     <span class="number">#95</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$2.70</span>
   </div>
 </div>
 <div class="card rare">
@@ -7091,6 +7796,7 @@
     <span class="name">Piplup</span>
     <span class="number">#98</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$19.35</span>
   </div>
 </div>
 <div class="card rare">
@@ -7099,6 +7805,7 @@
     <span class="name">Wigglytuff</span>
     <span class="number">#105</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    <span class="price price-rare">$7.72</span>
   </div>
 </div>
   </div>
@@ -7118,6 +7825,7 @@
     <span class="name">Erika's Tangela</span>
     <span class="number">#218</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    
   </div>
 </div>
 <div class="card rare">
@@ -7126,6 +7834,7 @@
     <span class="name">Beautifly</span>
     <span class="number">#219</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    
   </div>
 </div>
 <div class="card rare">
@@ -7134,6 +7843,7 @@
     <span class="name">Budew</span>
     <span class="number">#221</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    
   </div>
 </div>
 <div class="card rare">
@@ -7142,6 +7852,7 @@
     <span class="name">Scorbunny</span>
     <span class="number">#225</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    
   </div>
 </div>
 <div class="card rare">
@@ -7150,6 +7861,7 @@
     <span class="name">Psyduck</span>
     <span class="number">#226</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    
   </div>
 </div>
 <div class="card rare">
@@ -7158,6 +7870,7 @@
     <span class="name">Snorunt</span>
     <span class="number">#227</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    
   </div>
 </div>
 <div class="card rare">
@@ -7166,6 +7879,7 @@
     <span class="name">Marill</span>
     <span class="number">#232</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    
   </div>
 </div>
 <div class="card rare">
@@ -7174,6 +7888,7 @@
     <span class="name">Slurpuff</span>
     <span class="number">#236</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    
   </div>
 </div>
 <div class="card rare">
@@ -7182,6 +7897,7 @@
     <span class="name">Medicham</span>
     <span class="number">#241</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    
   </div>
 </div>
 <div class="card rare">
@@ -7190,6 +7906,7 @@
     <span class="name">Mightyena</span>
     <span class="number">#243</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    
   </div>
 </div>
   </div>
@@ -7209,6 +7926,7 @@
     <span class="name">Mega Clefable ex</span>
     <span class="number">#119</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    
   </div>
 </div>
 <div class="card rare">
@@ -7217,6 +7935,7 @@
     <span class="name">Mega Zygarde ex</span>
     <span class="number">#120</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    
   </div>
 </div>
 <div class="card rare">
@@ -7225,6 +7944,7 @@
     <span class="name">Meowth ex</span>
     <span class="number">#121</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    
   </div>
 </div>
   </div>
@@ -7244,6 +7964,7 @@
     <span class="name">Mega Greninja ex</span>
     <span class="number">#122</span>
     <span class="rarity is-rare">Mega Hyper Rare</span>
+    
   </div>
 </div>
 <div class="card rare">
@@ -7252,6 +7973,7 @@
     <span class="name">Mega Greninja ex</span>
     <span class="number">#116</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    
   </div>
 </div>
 <div class="card rare">
@@ -7260,6 +7982,7 @@
     <span class="name">Cinccino ex</span>
     <span class="number">#119</span>
     <span class="rarity is-rare">Special Illustration Rare</span>
+    
   </div>
 </div>
 <div class="card rare">
@@ -7268,6 +7991,7 @@
     <span class="name">Froakie</span>
     <span class="number">#88</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    
   </div>
 </div>
 <div class="card rare">
@@ -7276,6 +8000,7 @@
     <span class="name">Frogadier</span>
     <span class="number">#89</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    
   </div>
 </div>
 <div class="card rare">
@@ -7284,6 +8009,7 @@
     <span class="name">Xerneas</span>
     <span class="number">#91</span>
     <span class="rarity is-rare">Illustration Rare</span>
+    
   </div>
 </div>
   </div>
