@@ -54,6 +54,97 @@
   opacity: 0.85;
 }
 
+.exportBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.publishBtn {
+  background: var(--accent2);
+  color: #fff;
+}
+
+.clearPatBtn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  padding: 0.35rem 0.7rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.clearPatBtn:hover {
+  border-color: var(--text-muted);
+  color: var(--text);
+}
+
+.patSetup {
+  margin-top: 0.75rem;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 600px;
+}
+
+.patTitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.patHint {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.patRow {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.patInput {
+  flex: 1;
+  min-width: 200px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  padding: 0.35rem 0.7rem;
+  font-size: 0.82rem;
+  font-family: monospace;
+}
+
+.patInput:focus {
+  outline: none;
+  border-color: var(--accent2);
+}
+
+.publishSuccess {
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+  color: #4caf82;
+}
+
+.publishLink {
+  color: #4caf82;
+  font-weight: 600;
+}
+
+.publishError {
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+  color: #e05c5c;
+}
+
 .main {
   max-width: 1400px;
   margin: 0 auto;

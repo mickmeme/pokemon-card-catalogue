@@ -8,7 +8,7 @@ function esc(str) {
     .replace(/"/g, '&quot;')
 }
 
-export function generateReport(favs) {
+function buildHtml(favs) {
   const cards = Object.values(favs)
 
   const grouped = cards.reduce((acc, card) => {
@@ -53,7 +53,7 @@ ${cardsHtml}
 </section>`
   }).join('\n')
 
-  const html = `<!DOCTYPE html>
+  return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -168,7 +168,10 @@ ${groupsHtml}
   </footer>
 </body>
 </html>`
+}
 
+export function generateReport(favs) {
+  const html = buildHtml(favs)
   const blob = new Blob([html], { type: 'text/html' })
   const url = URL.createObjectURL(blob)
   const a = document.createElement('a')
@@ -178,4 +181,53 @@ ${groupsHtml}
   a.click()
   document.body.removeChild(a)
   URL.revokeObjectURL(url)
+}
+
+const GH_OWNER = 'mickmeme'
+const GH_REPO = 'pokemon-card-catalogue'
+const GH_BRANCH = 'gh-pages'
+const GH_PATH = 'index.html'
+
+export async function publishToGitHubPages(favs, token) {
+  const html = buildHtml(favs)
+
+  const bytes = new TextEncoder().encode(html)
+  const binStr = Array.from(bytes, b => String.fromCodePoint(b)).join('')
+  const content = btoa(binStr)
+
+  const headers = {
+    Authorization: `token ${token}`,
+    Accept: 'application/vnd.github.v3+json',
+    'Content-Type': 'application/json',
+  }
+
+  let sha
+  try {
+    const r = await fetch(
+      `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_PATH}?ref=${GH_BRANCH}`,
+      { headers }
+    )
+    if (r.ok) sha = (await r.json()).sha
+  } catch {}
+
+  const res = await fetch(
+    `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_PATH}`,
+    {
+      method: 'PUT',
+      headers,
+      body: JSON.stringify({
+        message: `Update favourites report ${new Date().toISOString().slice(0, 10)}`,
+        content,
+        branch: GH_BRANCH,
+        ...(sha ? { sha } : {}),
+      }),
+    }
+  )
+
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({}))
+    throw new Error(err.message ?? `GitHub API error ${res.status}`)
+  }
+
+  return `https://${GH_OWNER}.github.io/${GH_REPO}/`
 }

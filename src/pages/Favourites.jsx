@@ -2,14 +2,20 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useFavourites } from '../context/FavouritesContext'
 import { getRarityTier, RARE_RARITIES } from '../utils/rarity'
-import { generateReport } from '../utils/generateReport'
+import { generateReport, publishToGitHubPages } from '../utils/generateReport'
 import CardImage from '../components/CardImage'
 import styles from './Favourites.module.css'
 import cardStyles from './SetDetail.module.css'
 
+const PAT_KEY = 'ghPat'
+
 export default function Favourites() {
   const { favs, toggle, isFav } = useFavourites()
   const [flipped, setFlipped] = useState({})
+  const [publishing, setPublishing] = useState(false)
+  const [publishResult, setPublishResult] = useState(null)
+  const [showPatSetup, setShowPatSetup] = useState(false)
+  const [patInput, setPatInput] = useState('')
 
   const cards = Object.values(favs)
 
@@ -27,6 +33,43 @@ export default function Favourites() {
   const toggleFlip = (id) =>
     setFlipped((prev) => ({ ...prev, [id]: !prev[id] }))
 
+  async function handlePublish(token) {
+    setPublishing(true)
+    setPublishResult(null)
+    try {
+      const url = await publishToGitHubPages(favs, token)
+      setPublishResult({ url })
+    } catch (e) {
+      setPublishResult({ error: e.message })
+    } finally {
+      setPublishing(false)
+    }
+  }
+
+  function onPublishClick() {
+    const saved = localStorage.getItem(PAT_KEY)
+    if (saved) {
+      handlePublish(saved)
+    } else {
+      setShowPatSetup(true)
+      setPublishResult(null)
+    }
+  }
+
+  function onSaveAndPublish() {
+    const token = patInput.trim()
+    if (!token) return
+    localStorage.setItem(PAT_KEY, token)
+    setShowPatSetup(false)
+    setPatInput('')
+    handlePublish(token)
+  }
+
+  function onClearPat() {
+    localStorage.removeItem(PAT_KEY)
+    setPublishResult(null)
+  }
+
   return (
     <div className={styles.page}>
       <header className={styles.header}>
@@ -35,12 +78,66 @@ export default function Favourites() {
             <span className={styles.star}>★</span> Favourites
           </h1>
           {cards.length > 0 && (
-            <div className={styles.subtitleRow}>
-              <p className={styles.subtitle}>{cards.length} card{cards.length !== 1 ? 's' : ''} across {groups.length} set{groups.length !== 1 ? 's' : ''}</p>
-              <button className={styles.exportBtn} onClick={() => generateReport(favs)}>
-                ↓ Download Report
-              </button>
-            </div>
+            <>
+              <div className={styles.subtitleRow}>
+                <p className={styles.subtitle}>{cards.length} card{cards.length !== 1 ? 's' : ''} across {groups.length} set{groups.length !== 1 ? 's' : ''}</p>
+                <button className={styles.exportBtn} onClick={() => generateReport(favs)}>
+                  ↓ Download Report
+                </button>
+                <button
+                  className={`${styles.exportBtn} ${styles.publishBtn}`}
+                  onClick={onPublishClick}
+                  disabled={publishing}
+                >
+                  {publishing ? 'Publishing…' : '↑ Publish to Pages'}
+                </button>
+                {localStorage.getItem(PAT_KEY) && (
+                  <button className={styles.clearPatBtn} onClick={onClearPat} title="Clear saved GitHub token">
+                    ✕ token
+                  </button>
+                )}
+              </div>
+
+              {showPatSetup && (
+                <div className={styles.patSetup}>
+                  <p className={styles.patTitle}>GitHub Personal Access Token required</p>
+                  <p className={styles.patHint}>
+                    Create one at <strong>github.com → Settings → Developer settings → Personal access tokens</strong>.
+                    It needs <strong>repo</strong> scope (or <strong>Contents: Read and write</strong> for fine-grained tokens).
+                  </p>
+                  <div className={styles.patRow}>
+                    <input
+                      className={styles.patInput}
+                      type="password"
+                      placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"
+                      value={patInput}
+                      onChange={e => setPatInput(e.target.value)}
+                      onKeyDown={e => e.key === 'Enter' && onSaveAndPublish()}
+                      autoFocus
+                    />
+                    <button className={styles.exportBtn} onClick={onSaveAndPublish} disabled={!patInput.trim()}>
+                      Save &amp; Publish
+                    </button>
+                    <button className={styles.clearPatBtn} onClick={() => setShowPatSetup(false)}>
+                      Cancel
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {publishResult?.url && (
+                <p className={styles.publishSuccess}>
+                  Published! View at{' '}
+                  <a href={publishResult.url} target="_blank" rel="noreferrer" className={styles.publishLink}>
+                    {publishResult.url}
+                  </a>
+                  {' '}(may take ~30 s to update)
+                </p>
+              )}
+              {publishResult?.error && (
+                <p className={styles.publishError}>Publish failed: {publishResult.error}</p>
+              )}
+            </>
           )}
         </div>
       </header>
