@@ -1,0 +1,235 @@
+.page {
+  min-height: 100vh;
+}
+
+.header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  border-bottom: 2px solid var(--accent);
+  padding: 2rem 1rem;
+}
+
+.headerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 800;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  margin-top: 0.4rem;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.status {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.error {
+  text-align: center;
+  color: #ff6b6b;
+  margin-bottom: 1.5rem;
+}
+
+.empty {
+  text-align: center;
+  color: var(--text-muted);
+  margin: 5rem auto;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.emptyIcon {
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  opacity: 0.5;
+}
+
+/* Table */
+.tableWrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.table th {
+  text-align: left;
+  padding: 0.6rem 1rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.thCard { min-width: 260px; }
+.thPrice { min-width: 140px; }
+.thGrade { min-width: 120px; text-align: center; }
+
+.psa8  { color: #cd7f32; }
+.psa9  { color: #b4bec8; }
+.psa10 { color: #ffd700; }
+
+.row {
+  border-bottom: 1px solid var(--border);
+  transition: background 0.12s;
+}
+
+.row:hover {
+  background: var(--surface);
+}
+
+/* Card cell */
+.tdCard {
+  padding: 0.85rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.thumb {
+  flex-shrink: 0;
+  width: 72px !important;
+  height: 100px !important;
+  cursor: pointer;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.cardName {
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.cardName.rare {
+  color: var(--accent);
+}
+
+.cardSet {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.rarity {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.rareRarity {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Price cell */
+.tdPrice {
+  padding: 0.85rem 1rem;
+  vertical-align: middle;
+}
+
+.priceVal {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #6ecfab;
+}
+
+.priceVal.rare {
+  color: var(--accent);
+}
+
+.priceSub {
+  display: block;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+.noPrice {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  opacity: 0.45;
+}
+
+.loading {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* Grade cells */
+.tdGrade {
+  padding: 0.85rem 1rem;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.psaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.15s, transform 0.1s;
+  white-space: nowrap;
+}
+
+.psaBtn:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
+
+.psaBtn.psa8 {
+  background: rgba(205, 127, 50, 0.12);
+  border-color: rgba(205, 127, 50, 0.4);
+  color: #cd7f32;
+}
+
+.psaBtn.psa9 {
+  background: rgba(180, 190, 200, 0.12);
+  border-color: rgba(180, 190, 200, 0.35);
+  color: #b4bec8;
+}
+
+.psaBtn.psa10 {
+  background: rgba(255, 215, 0, 0.12);
+  border-color: rgba(255, 215, 0, 0.45);
+  color: #ffd700;
+}
+
+.psaLabel {
+  font-size: 0.75rem;
+}
+
+.psaArrow {
+  font-size: 0.7rem;
+  opacity: 0.75;
+}

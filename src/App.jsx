@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import SetDetail from './pages/SetDetail'
 import Favourites from './pages/Favourites'
 import Market from './pages/Market'
+import GradedComparisons from './pages/GradedComparisons'
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/set/:setId" element={<SetDetail />} />
         <Route path="/favourites" element={<Favourites />} />
         <Route path="/market" element={<Market />} />
+        <Route path="/graded" element={<GradedComparisons />} />
       </Routes>
     </FavouritesProvider>
   )

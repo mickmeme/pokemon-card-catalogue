@@ -29,6 +29,13 @@ export default function GlobalNav() {
         Market Prices
         {count > 0 && <span className={styles.badge}>{count}</span>}
       </NavLink>
+      <NavLink
+        to="/graded"
+        className={({ isActive }) => `${styles.tab} ${isActive ? styles.active : ''}`}
+      >
+        Graded
+        {count > 0 && <span className={styles.badge}>{count}</span>}
+      </NavLink>
     </nav>
   )
 }
